@@ -13,10 +13,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false, 
-      theme: ThemeData(fontFamily: 'Popppins'),
+      theme: ThemeData(fontFamily: 'Popppins', useMaterial3: true),
       // theme: ThemeData(fontFamily: 'Poppins'),
       home: const HomePage()
     );
   }
 }
+
 
