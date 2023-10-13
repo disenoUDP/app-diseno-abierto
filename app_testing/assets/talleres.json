@@ -1,0 +1,19 @@
+{
+    "talleres": [
+        {
+            "nombre": "John",
+            "profeTitular": "Doe",
+            "profeAdjunto": "Doe",
+            "ayudante": "Doe",
+            "nivel": 1
+        },
+
+        {
+            "nombre": "John",
+            "profeTitular": "Doe",
+            "profeAdjunto": "Doe",
+            "ayudante": "Doe",
+            "nivel": 2
+        }
+    ]
+}

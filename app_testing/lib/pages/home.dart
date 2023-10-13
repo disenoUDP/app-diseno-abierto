@@ -27,7 +27,7 @@ class TabBarExample extends StatelessWidget {
         appBar: AppBar(
           centerTitle: true,
           title: const Text(
-            'Medios de transporte',
+            '#disenoabiertoudp',
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold
@@ -51,16 +51,7 @@ class TabBarExample extends StatelessWidget {
           children: <Widget>[
             Center(
               child: Text(
-                'Esto es un barco',
-                style: TextStyle(
-                  fontSize: 1,
-                  fontWeight: FontWeight.normal
-                ),
-              ),
-            ),
-            Center(
-              child: Text(
-                'Esto es un bus',
+                'Diseño abierto UDP',
                 style: TextStyle(
                   fontSize: 17,
                   fontWeight: FontWeight.normal
@@ -69,7 +60,16 @@ class TabBarExample extends StatelessWidget {
             ),
             Center(
               child: Text(
-                'Esto es un auto',
+                'Mapa',
+                style: TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.normal
+                ),
+              ),
+            ),
+            Center(
+              child: Text(
+                'Talleres',
                 style: TextStyle(
                   fontSize: 17,
                   fontWeight: FontWeight.normal
