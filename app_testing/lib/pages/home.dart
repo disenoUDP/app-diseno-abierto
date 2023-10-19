@@ -36,13 +36,13 @@ class TabBarExample extends StatelessWidget {
           bottom: const TabBar(
             tabs: <Widget>[
               Tab(
-                icon: Icon(Icons.directions_boat),
+                icon: Icon(Icons.maps_home_work_outlined),
               ),
               Tab(
-                icon: Icon(Icons.directions_bus),
+                icon: Icon(Icons.map_outlined),
               ),
               Tab(
-                icon: Icon(Icons.directions_car),
+                icon: Icon(Icons.checklist_outlined),
               ),
             ]
           ),
@@ -109,7 +109,7 @@ class HomePage extends StatelessWidget {
         ),
       ),
 
-      // esto cambia en ios y android
+      // esto cambia en ios y android, ver como portar los 2
       centerTitle: true, 
       backgroundColor: Colors.white,
       elevation: 0.0,
