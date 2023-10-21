@@ -1,18 +1,18 @@
 {
     "talleres": [
         {
-            "nombre": "John",
-            "profeTitular": "Doe",
-            "profeAdjunto": "Doe",
-            "ayudante": "Doe",
+            "nombre": "Taller Vertical UX",
+            "profeTitular": "Sergio Majluf",
+            "profeAdjunto": "Aarón Montoya",
+            "ayudante": "Andrés Martin",
             "nivel": 1
         },
-
+            
         {
-            "nombre": "John",
-            "profeTitular": "Doe",
-            "profeAdjunto": "Doe",
-            "ayudante": "Doe",
+            "nombre": "Taller Vertical UI",
+            "profeTitular": "Sergio Majluf",
+            "profeAdjunto": "Aarón Montoya",
+            "ayudante": "Sebastián",
             "nivel": 2
         }
     ]
