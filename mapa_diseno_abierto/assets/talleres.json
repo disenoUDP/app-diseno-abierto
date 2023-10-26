@@ -1,0 +1,19 @@
+{
+    "talleres": [
+        {
+            "nombre": "Taller Vertical UX",
+            "profeTitular": "Sergio Majluf",
+            "profeAdjunto": "Aarón Montoya",
+            "ayudante": "Andrés Martin",
+            "nivel": 1
+        },
+            
+        {
+            "nombre": "Taller Vertical UI",
+            "profeTitular": "Sergio Majluf",
+            "profeAdjunto": "Aarón Montoya",
+            "ayudante": "Sebastián",
+            "nivel": 2
+        }
+    ]
+}
