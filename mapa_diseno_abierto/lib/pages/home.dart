@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import 'package:flutter_svg/flutter_svg.dart';
 
 void main() => runApp(const TabBarApp());
@@ -93,43 +94,43 @@ class HomePage extends StatelessWidget {
       ),
 
       // esto cambia en ios y android, ver como portar los 2
-      centerTitle: true,
-      backgroundColor: Colors.white,
-      elevation: 0.0,
-      leading: GestureDetector(
-        onTap: () {},
-        child: Container(
-          margin: const EdgeInsets.all(10),
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: SvgPicture.asset(
-            'assets/icons/Arrow - Left 2.svg',
-            height: 20,
-            width: 20,
-          ),
-        ),
-      ),
+      // centerTitle: true,
+      // backgroundColor: Colors.white,
+      // elevation: 0.0,
+      // leading: GestureDetector(
+      //   onTap: () {},
+      //   child: Container(
+      //     margin: const EdgeInsets.all(10),
+      //     alignment: Alignment.center,
+      //     decoration: BoxDecoration(
+      //       color: Colors.white,
+      //       borderRadius: BorderRadius.circular(10),
+      //     ),
+      //     child: SvgPicture.asset(
+      //       'assets/icons/Arrow - Left 2.svg',
+      //       height: 20,
+      //       width: 20,
+      //     ),
+      //   ),
+      // ),
 
-      actions: [
-        GestureDetector(
-          onTap: () {},
-          child: Container(
-            margin: const EdgeInsets.all(10),
-            alignment: Alignment.center,
-            width: 37,
-            decoration: BoxDecoration(
-                color: Colors.white, borderRadius: BorderRadius.circular(10)),
-            child: SvgPicture.asset(
-              'assets/icons/dots.svg',
-              height: 5,
-              width: 5,
-            ),
-          ),
-        ),
-      ],
+      // actions: [
+      //   GestureDetector(
+      //     onTap: () {},
+      //     child: Container(
+      //       margin: const EdgeInsets.all(10),
+      //       alignment: Alignment.center,
+      //       width: 37,
+      //       decoration: BoxDecoration(
+      //           color: Colors.white, borderRadius: BorderRadius.circular(10)),
+      //       child: SvgPicture.asset(
+      //         'assets/icons/dots.svg',
+      //         height: 5,
+      //         width: 5,
+      //       ),
+      //     ),
+      //   ),
+      // ],
     );
   }
 }
