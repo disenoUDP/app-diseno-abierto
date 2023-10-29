@@ -1,20 +1,10 @@
 // import 'dart:convert';
+// ignore: unused_import
 import 'package:mapa_diseno_abierto/pages/home.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter/services.dart' show rootBundle;
 
-Future<void> main() async {
-  runApp(MaterialApp(
-    home: Scaffold(
-      appBar: AppBar(
-        title: const Text('Leer JSON desde assets'),
-      ),
-      body: const Center(
-        child: Text('El nombre es: '),
-      ),
-    ),
-  ));
-
+void main() {
   runApp(const MyApp());
 }
 
@@ -27,7 +17,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(fontFamily: 'Popppins', useMaterial3: true),
-        home: const HomePage());
+        // home: const HomePage()
+    );
   }
 }
 
