@@ -1,6 +1,3 @@
-// import 'dart:convert';
-// ignore: unused_import
-import 'package:mapa_diseno_abierto/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
