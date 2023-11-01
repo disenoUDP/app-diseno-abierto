@@ -1,19 +1,94 @@
 {
-    "talleres": [
-        {
-            "nombre": "Taller Vertical UX",
-            "profeTitular": "Sergio Majluf",
-            "profeAdjunto": "Aarón Montoya",
-            "ayudante": "Andrés Martin",
-            "nivel": 1
-        },
-            
-        {
-            "nombre": "Taller Vertical UI",
-            "profeTitular": "Sergio Majluf",
-            "profeAdjunto": "Aarón Montoya",
-            "ayudante": "Sebastián",
-            "nivel": 2
-        }
-    ]
+    "version": "0.0.1",
+    "periodo": "2023-02",
+    "talleres": {
+      "taller-00": {
+        "sigla": "DIS8637",
+        "nombre": "Taller de experiencia de usuario",
+        "docente principal": "Sergio Majluf",
+        "docente auxiliar": "Aarón Montoya",
+        "ayudante": "Andrés Martín", 
+        "nivel": "Integrado vertical"
+      },
+      "taller-01": {
+        "sigla": "undefined",
+        "nombre": "Taller editorial: libro ilustrado",
+        "docente principal": "Jennifer King",
+        "docente auxiliar": "Alvaro Arteaga",
+        "ayudante": "undefined",
+        "nivel": "Integrado vertical"
+      },
+      "taller-02": {
+        "sigla": "undefined",
+        "nombre": "Taller de exploración y cultura visual",
+        "docente principal": "Manuel Cordova",
+        "docente auxiliar": "Ariel Altamirano",
+        "ayudante": "undefined",
+        "nivel": "Integrado vertical"
+      },
+      "taller-03": {
+        "sigla": "undefined",
+        "nombre": "Taller local: exploración material",
+        "docente principal": "Rodrigo Bravo",
+        "docente auxiliar": "Diego Gajardo",
+        "ayudante": "undefined",
+        "nivel": "Integrado vertical"
+      },
+      "taller-04": {
+        "sigla": "undefined",
+        "nombre": "Taller de moda sostenible",
+        "docente principal": "Alejandra Ruiz",
+        "docente auxiliar": "Josefine Bachmann",
+        "ayudante": "undefined",
+        "nivel": "Integrado vertical"
+      },
+      "taller-05": {
+        "sigla": "undefined",
+        "nombre": "Taller de superficies textiles",
+        "docente principal": "Maru Romero",
+        "docente auxiliar": "Maria Eugenia Ibarra",
+        "ayudante": "undefined",
+        "nivel": "Integrado vertical"
+      },
+      "taller-06": {
+        "sigla": "undefined",
+        "nombre": "Taller procesos y fabricación",
+        "docente principal": "Vicente Stephens",
+        "docente auxiliar": "Margarita Talep",
+        "ayudante": "undefined",
+        "nivel": "Integrado vertical"
+      },
+      "taller-07": {
+        "sigla": "undefined",
+        "nombre": "Taller de diseño y paisaje",
+        "docente principal": "Simón Gallardo",
+        "docente auxiliar": "Juan Manuel Gili",
+        "ayudante": "undefined",
+        "nivel": "Integrado vertical"
+      },
+      "taller-08": {
+        "sigla": "undefined",
+        "nombre": "Taller experimental de visualización de datos",
+        "docente principal": "Pedro Pedraza",
+        "docente auxiliar": "Sergio Mora",
+        "ayudante": "undefined",
+        "nivel": "Integrado vertical"
+      },
+      "taller-09": {
+        "sigla": "undefined",
+        "nombre": "Taller exposiciones y procesos curatoriales",
+        "docente principal": "Pedro Silva",
+        "docente auxiliar": "undefined",
+        "ayudante": "undefined",
+        "nivel": "Integrado vertical"
+      },
+      "taller-10": {
+        "sigla": "undefined",
+        "nombre": "Taller internacional Europa",
+        "docente principal": "Barbara Pino",
+        "docente auxiliar": "undefined",
+        "ayudante": "undefined",
+        "nivel": "Integrado vertical"
+      }
+    }
 }

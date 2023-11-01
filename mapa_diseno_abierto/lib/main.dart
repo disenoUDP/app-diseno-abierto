@@ -38,7 +38,7 @@ class Taller {
     required this.id,
     required this.title,
     required this.url,
-    required this.thumbnailUrl,
+    required this.thumbnailUrl
   });
 
   factory Taller.fromJson(Map<String, dynamic> json) {
