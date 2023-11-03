@@ -12,7 +12,7 @@ import 'package:http/http.dart' as http;
 
 Future<List<Taller>> fetchTalleres(http.Client client) async {
   final response = await client
-      .get(Uri.parse('https://jsonplaceholder.typicode.com/photos'));
+      .get(Uri.parse('https://raw.githubusercontent.com/janisepulveda/app-diseno-abierto/main/mapa_diseno_abierto/assets/talleres.json'));
 
   // Use the compute function to run parseTalleres in a separate isolate.
   return compute(parseTalleres, response.body);
