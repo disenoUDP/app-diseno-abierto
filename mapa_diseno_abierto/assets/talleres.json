@@ -89,6 +89,94 @@
         "docente auxiliar": "undefined",
         "ayudante": "undefined",
         "nivel": "Integrado vertical"
+      },
+      "taller-11": {
+        "sigla": "undefined",
+        "nombre": "Taller de Talleres de primer año",
+        "docente principal": "Bernardita Marambio",
+        "docente auxiliar": "Andro Yurac",
+        "ayudante": "undefined", 
+        "nivel": "Talleres de primer año"
+      },
+      "taller-12": {
+        "sigla": "undefined",
+        "nombre": "Taller de Talleres de primer año",
+        "docente principal": "María Justiniano",
+        "docente auxiliar": "Catalina Cumsille",
+        "ayudante": "undefined", 
+        "nivel": "Talleres de primer año"
+      },
+      "taller-13": {
+        "sigla": "undefined",
+        "nombre": "Taller de Talleres de primer año",
+        "docente principal": "Jorge Morales",
+        "docente auxiliar": "María de la Paz Faúndez",
+        "ayudante": "undefined", 
+        "nivel": "Talleres de primer año"
+      },
+      "taller-14": {
+        "sigla": "undefined",
+        "nombre": "Taller de Talleres de primer año",
+        "docente principal": "Joaquín Bejares",
+        "docente auxiliar": "José Vivallo",
+        "ayudante": "undefined", 
+        "nivel": "Talleres de primer año"
+      },
+      "taller-15": {
+        "sigla": "undefined",
+        "nombre": "Taller de Talleres de primer año",
+        "docente principal": "María Paz Morales",
+        "docente auxiliar": "Javiera Yáñez",
+        "ayudante": "undefined", 
+        "nivel": "Talleres de primer año"
+      },
+      "taller-16": {
+        "sigla": "undefined",
+        "nombre": "Taller de Talleres de primer año",
+        "docente principal": "Juana Díaz",
+        "docente auxiliar": "Daniela Rivera",
+        "ayudante": "undefined", 
+        "nivel": "Talleres de primer año"
+      },
+      "taller-17": {
+        "sigla": "undefined",
+        "nombre": "Taller de diseño gráfico",
+        "docente principal": "Antonia Necochea",
+        "docente auxiliar": "Felipe Sanzana",
+        "ayudante": "undefined", 
+        "nivel": "Talleres de segundo año"
+      },
+      "taller-18": {
+        "sigla": "undefined",
+        "nombre": "Taller de diseño gráfico",
+        "docente principal": "Camilo Zúñiga",
+        "docente auxiliar": "Aribel Gonzáles",
+        "ayudante": "undefined", 
+        "nivel": "Talleres de segundo año"
+      },
+      "taller-19": {
+        "sigla": "undefined",
+        "nombre": "Taller de diseño gráfico",
+        "docente principal": "Nicolás Sagredo",
+        "docente auxiliar": "Daniela Ayala",
+        "ayudante": "undefined", 
+        "nivel": "Talleres de segundo año"
+      },
+      "taller-20": {
+        "sigla": "undefined",
+        "nombre": "Taller de diseño industrial",
+        "docente principal": "Carolina Kusanovich",
+        "docente auxiliar": "Felipe Cardemil",
+        "ayudante": "undefined", 
+        "nivel": "Talleres de segundo año"
+      },
+      "taller-21": {
+        "sigla": "undefined",
+        "nombre": "Taller de diseño industrial",
+        "docente principal": "Héctor Novoa",
+        "docente auxiliar": "Paula Corrales",
+        "ayudante": "undefined", 
+        "nivel": "Talleres de segundo año"
       }
     }
 }
