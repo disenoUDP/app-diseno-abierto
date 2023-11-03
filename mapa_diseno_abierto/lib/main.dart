@@ -4,15 +4,21 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart'; 
 import 'package:http/http.dart' as http;
 
-// // import 'dart:convert';
 // import 'package:flutter/material.dart';
 // // import 'package:flutter/services.dart' show rootBundle;
 
+Future<String> loadAsset() async {
+  return rootBundle.loadString('assets/talleres.json');
+}
+
 Future<List<Taller>> fetchTalleres(http.Client client) async {
   final response = await client
-      .get(Uri.parse('https://raw.githubusercontent.com/janisepulveda/app-diseno-abierto/main/mapa_diseno_abierto/assets/talleres.json'));
+      // .get(Uri.parse('https://raw.githubusercontent.com/janisepulveda/app-diseno-abierto/main/mapa_diseno_abierto/assets/talleres.json'));
+       .get(Uri.parse('assets/photos.json'));
+       // TODO: tutorial aqui https://docs.flutter.dev/ui/assets/assets-and-images
 
   // Use the compute function to run parseTalleres in a separate isolate.
   return compute(parseTalleres, response.body);
