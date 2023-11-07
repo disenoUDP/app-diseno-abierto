@@ -11,15 +11,15 @@
         "nivel": "Integrado vertical"
       },
       "taller-01": {
-        "sigla": "undefined",
+        "sigla": "DIS8623",
         "nombre": "Taller editorial: libro ilustrado",
         "docente principal": "Jennifer King",
         "docente auxiliar": "Alvaro Arteaga",
-        "ayudante": "undefined",
+        "ayudante": "Denisse Navarrete",
         "nivel": "Integrado vertical"
       },
       "taller-02": {
-        "sigla": "undefined",
+        "sigla": "DIS8625",
         "nombre": "Taller de exploración y cultura visual",
         "docente principal": "Manuel Cordova",
         "docente auxiliar": "Ariel Altamirano",
@@ -27,7 +27,7 @@
         "nivel": "Integrado vertical"
       },
       "taller-03": {
-        "sigla": "undefined",
+        "sigla": "DIS8621",
         "nombre": "Taller local: exploración material",
         "docente principal": "Rodrigo Bravo",
         "docente auxiliar": "Diego Gajardo",
@@ -35,47 +35,47 @@
         "nivel": "Integrado vertical"
       },
       "taller-04": {
-        "sigla": "undefined",
+        "sigla": "DIS8627",
         "nombre": "Taller de moda sostenible",
         "docente principal": "Alejandra Ruiz",
         "docente auxiliar": "Josefine Bachmann",
-        "ayudante": "undefined",
+        "ayudante": "Roberto Quintana",
         "nivel": "Integrado vertical"
       },
       "taller-05": {
-        "sigla": "undefined",
+        "sigla": "DIS8631",
         "nombre": "Taller de superficies textiles",
         "docente principal": "Maru Romero",
         "docente auxiliar": "Maria Eugenia Ibarra",
-        "ayudante": "undefined",
+        "ayudante": "Trinidad Avila",
         "nivel": "Integrado vertical"
       },
       "taller-06": {
-        "sigla": "undefined",
+        "sigla": "DIS8642",
         "nombre": "Taller procesos y fabricación",
         "docente principal": "Vicente Stephens",
         "docente auxiliar": "Margarita Talep",
-        "ayudante": "undefined",
+        "ayudante": "Sebastián Lioi",
         "nivel": "Integrado vertical"
       },
       "taller-07": {
-        "sigla": "undefined",
+        "sigla": "DIS8633",
         "nombre": "Taller de diseño y paisaje",
         "docente principal": "Simón Gallardo",
         "docente auxiliar": "Juan Manuel Gili",
-        "ayudante": "undefined",
+        "ayudante": "Benjamín Muller",
         "nivel": "Integrado vertical"
       },
       "taller-08": {
-        "sigla": "undefined",
+        "sigla": "DIS8640",
         "nombre": "Taller experimental de visualización de datos",
         "docente principal": "Pedro Pedraza",
         "docente auxiliar": "Sergio Mora",
-        "ayudante": "undefined",
+        "ayudante": "José Meza",
         "nivel": "Integrado vertical"
       },
       "taller-09": {
-        "sigla": "undefined",
+        "sigla": "DIS8641",
         "nombre": "Taller exposiciones y procesos curatoriales",
         "docente principal": "Pedro Silva",
         "docente auxiliar": "undefined",
@@ -92,7 +92,7 @@
       },
       "taller-11": {
         "sigla": "undefined",
-        "nombre": "Taller de Talleres de primer año",
+        "nombre": "Taller de introducción al diseño",
         "docente principal": "Bernardita Marambio",
         "docente auxiliar": "Andro Yurac",
         "ayudante": "undefined", 
@@ -100,7 +100,7 @@
       },
       "taller-12": {
         "sigla": "undefined",
-        "nombre": "Taller de Talleres de primer año",
+        "nombre": "Taller de introducción al diseño",
         "docente principal": "María Justiniano",
         "docente auxiliar": "Catalina Cumsille",
         "ayudante": "undefined", 
@@ -108,7 +108,7 @@
       },
       "taller-13": {
         "sigla": "undefined",
-        "nombre": "Taller de Talleres de primer año",
+        "nombre": "Taller de introducción al diseño",
         "docente principal": "Jorge Morales",
         "docente auxiliar": "María de la Paz Faúndez",
         "ayudante": "undefined", 
@@ -116,7 +116,7 @@
       },
       "taller-14": {
         "sigla": "undefined",
-        "nombre": "Taller de Talleres de primer año",
+        "nombre": "Taller de introducción al diseño",
         "docente principal": "Joaquín Bejares",
         "docente auxiliar": "José Vivallo",
         "ayudante": "undefined", 
@@ -124,7 +124,7 @@
       },
       "taller-15": {
         "sigla": "undefined",
-        "nombre": "Taller de Talleres de primer año",
+        "nombre": "Taller de introducción al diseño",
         "docente principal": "María Paz Morales",
         "docente auxiliar": "Javiera Yáñez",
         "ayudante": "undefined", 
@@ -132,7 +132,7 @@
       },
       "taller-16": {
         "sigla": "undefined",
-        "nombre": "Taller de Talleres de primer año",
+        "nombre": "Taller de introducción al diseño",
         "docente principal": "Juana Díaz",
         "docente auxiliar": "Daniela Rivera",
         "ayudante": "undefined", 
@@ -175,7 +175,7 @@
         "nombre": "Taller de diseño industrial",
         "docente principal": "Héctor Novoa",
         "docente auxiliar": "Paula Corrales",
-        "ayudante": "undefined", 
+        "ayudante": "Sebastián Mancero", 
         "nivel": "Talleres de segundo año"
       }
     }
