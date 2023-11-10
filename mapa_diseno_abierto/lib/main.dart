@@ -129,25 +129,31 @@ class MyHomePage extends StatelessWidget {
               },
             ),
             Center(
-              child: Row(
+              child: Column(
                 children: [
+
+                    const Padding(
+
+                    // ver como poner el texto en la parte superior izquierda
+                    padding: EdgeInsets.all(10),
+                    child: Positioned(
+                      top: 10,
+                      left: 10,
+                      child: Text(
+                      textAlign: TextAlign.left,
+                      'Mapa', 
+                      style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500, fontFamily: 'Poppins', color: Color(0xFFF801AE)),
+                    ),
+                   ),     
+                  ),
+
                   SvgPicture.asset(
 
                     // revisar el mapa en illustrator
                     'assets/mapa/planta1.svg',
-                    width: 350,
-                    height: 350,
+                    width: 400,
+                    height: 400,
                   ),
-
-                  const Padding(
-
-                    // ver como poner el texto en la parte superior izquierda
-                    padding: EdgeInsets.only(top: 10, right: 10, bottom: 10, left: 10),
-                    child: Text(
-                      'Mapa', 
-                      style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500, fontFamily: 'Poppins'),
-                    ),
-                  )
                 ],
               )
             ),
