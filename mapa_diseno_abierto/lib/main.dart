@@ -141,7 +141,7 @@ class MyHomePage extends StatelessWidget {
                       left: 10,
                       child: Text(
                       textAlign: TextAlign.left,
-                      'Mapa', 
+                      'Primera planta', 
                       style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500, fontFamily: 'Poppins', color: Color(0xFFF801AE)),
                     ),
                    ),     
@@ -154,6 +154,23 @@ class MyHomePage extends StatelessWidget {
                     width: 400,
                     height: 400,
                   ),
+
+                  SvgPicture.asset(
+
+                    // revisar el mapa en illustrator
+                    'assets/mapa/planta2.svg',
+                    width: 400,
+                    height: 400,
+                  ),
+
+                  SvgPicture.asset(
+
+                    // revisar el mapa en illustrator
+                    'assets/mapa/planta3.svg',
+                    width: 400,
+                    height: 400,
+                  ),
+                  
                 ],
               )
             ),
