@@ -58,7 +58,7 @@ flutter:
   assets: 
     - assets/talleres.json
     - assets/photos.json
-    - assets/mapa/Asset 2.svg
+    - assets/mapa/planta1.svg
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

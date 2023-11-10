@@ -134,15 +134,15 @@ class MyHomePage extends StatelessWidget {
                   SvgPicture.asset(
 
                     // revisar el mapa en illustrator
-                    'assets/mapa/Asset 2.svg',
-                    width: 400,
-                    height: 400,
+                    'assets/mapa/planta1.svg',
+                    width: 350,
+                    height: 350,
                   ),
 
                   const Padding(
-                    
+
                     // ver como poner el texto en la parte superior izquierda
-                    padding: EdgeInsets.only(left: 15),
+                    padding: EdgeInsets.only(top: 10, right: 10, bottom: 10, left: 10),
                     child: Text(
                       'Mapa', 
                       style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500, fontFamily: 'Poppins'),
