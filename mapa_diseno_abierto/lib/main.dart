@@ -1,10 +1,9 @@
 import 'dart:async';
 import 'dart:convert';
-
 import 'package:flutter/foundation.dart';
-// import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart'; 
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:http/http.dart' as http;
 
 // import 'package:flutter/material.dart';
@@ -17,7 +16,7 @@ Future<String> loadAsset() async {
 Future<List<Taller>> fetchTalleres(http.Client client) async {
   final response = await client
       // .get(Uri.parse('https://raw.githubusercontent.com/janisepulveda/app-diseno-abierto/main/mapa_diseno_abierto/assets/talleres.json'));
-       .get(Uri.parse('assets/photos.json'));
+       .get(Uri.parse('assets/talleres.json'));
        // TODO: tutorial aqui https://docs.flutter.dev/ui/assets/assets-and-images
 
   // Use the compute function to run parseTalleres in a separate isolate.
@@ -93,17 +92,19 @@ class MyHomePage extends StatelessWidget {
           centerTitle: true,
           title: const Text(
             '#disenoabiertoudp',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600, fontFamily: 'Poppins', color: Color(0xFFF801AE)),
           ),
+          backgroundColor: Colors.white,
           bottom: const TabBar(tabs: <Widget>[
             Tab(
-              icon: Icon(Icons.maps_home_work_outlined),
+              icon: Icon(Icons.maps_home_work_outlined, color: Color(0xFFF801AE)),
+
             ),
             Tab(
-              icon: Icon(Icons.map_outlined),
+              icon: Icon(Icons.map_outlined, color: Color(0xFFF801AE)),
             ),
             Tab(
-              icon: Icon(Icons.checklist_outlined),
+              icon: Icon(Icons.checklist_outlined, color: Color(0xFFF801AE)),
             ),
           ]),
         ),
@@ -114,7 +115,9 @@ class MyHomePage extends StatelessWidget {
               builder: (context, snapshot) {
                 if (snapshot.hasError) {
                   return const Center(
-                    child: Text('An error has occurred!'),
+                    child: Text('An error has occurred!',
+                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500, fontFamily: 'Poppins'),
+                    ),
                   );
                 } else if (snapshot.hasData) {
                   return TalleresList(talleres: snapshot.data!);
@@ -125,16 +128,33 @@ class MyHomePage extends StatelessWidget {
                 }
               },
             ),
-            const Center(
-              child: Text(
-                'Mapa',
-                style: TextStyle(fontSize: 17, fontWeight: FontWeight.normal),
-              ),
+            Center(
+              child: Row(
+                children: [
+                  SvgPicture.asset(
+
+                    // revisar el mapa en illustrator
+                    'assets/mapa/Asset 2.svg',
+                    width: 400,
+                    height: 400,
+                  ),
+
+                  const Padding(
+                    
+                    // ver como poner el texto en la parte superior izquierda
+                    padding: EdgeInsets.only(left: 15),
+                    child: Text(
+                      'Mapa', 
+                      style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500, fontFamily: 'Poppins'),
+                    ),
+                  )
+                ],
+              )
             ),
             const Center(
               child: Text(
                 'Talleres',
-                style: TextStyle(fontSize: 17, fontWeight: FontWeight.normal),
+                style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500, fontFamily: 'Poppins'),
               ),
             ),
           ],
