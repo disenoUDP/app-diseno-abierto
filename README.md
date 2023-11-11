@@ -42,7 +42,7 @@ preguntar aaron :)
 ## informes de entrega
 
 * Fecha inicio del proyecto: 08 septiembre 2023.
-*Primera fecha entrega: 24 noviembre 2023.
+* Primera fecha entrega: 24 noviembre 2023.
 
 ## desarrollo de la app
 
