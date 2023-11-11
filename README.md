@@ -52,17 +52,18 @@ preguntar aaron :)
   habia hecho algo similiar, por lo que fue un desafio,  ya que lo mas cercano a esto fue 
   conocer y usar el lenguaje de arduino.
   
-*Pasos de aprendizaje:
+* Pasos de aprendizaje:
 
  * Entender funcionamiento y uso de componentes de google material en flutter
  * Estudio completo de JSON para su implementación (este JSON, permite ser una base de datos, 
  en un idioma universal para el desarrolo de mas versiones de esta app u otras plataformas de 
  difusión)
- *Uso de git en la terminal para subir cambios y colaborar.
- *La aap corre diferente en IOS que en android, por lo tanto hay comandos diferentes para cada 
-  sistema. *Por ejemplo:Centrar un titulo es necesario especificar en android ya que por 
- default lo deja ancaldo en una esquina, en cambio en IOS no es necesario, ya que por default 
- esta en el centro.
+ * Uso de git en la terminal para subir cambios y colaborar.
+ * La app corre diferente en IOS que en android, por lo tanto hay comandos diferentes para cada 
+  sistema.
+  Por ejemplo: Centrar un titulo es necesario especificar en android ya que por 
+  default lo deja ancaldo en una esquina, en cambio en IOS no es necesario, ya que por default 
+  esta en el centro.
 * En portabilidad y colaboración se encontraron problemas ya que se realizo el proyecto en dos 
  computadores IOS pero con diferentes sistemas operativos, esto quiere decir que no se podian 
  realizar las mismas tareas de igual forma.
