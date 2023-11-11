@@ -31,7 +31,8 @@ Esta app está siendo desarrollada por @janisepulveda, estudiante de diseño UDP
 ## instalación de uso
 
 * En caso de tener dispositivo android descargar de la playstore
-* En caso de tener dispositivo ios descargar por usb (decisiones de uso argumentar )
+* En caso de tener dispositivo ios descargar por usb.
+* Se descarga por usb ya que subirlo a la appstore es costoso, y procura mucho más tiempo, por lo que se opto a una alternativa más accesible, esta ya esta probada en iphone y tambien en ipad.
 
 
 ## funcionamiento
@@ -52,7 +53,7 @@ preguntar aaron :)
   habia hecho algo similiar, por lo que fue un desafio,  ya que lo mas cercano a esto fue 
   conocer y usar el lenguaje de arduino.
   
-* Pasos de aprendizaje:
+  * Pasos de aprendizaje:
 
  * Entender funcionamiento y uso de componentes de google material en flutter
  * Estudio completo de JSON para su implementación (este JSON, permite ser una base de datos, 
@@ -67,9 +68,6 @@ preguntar aaron :)
 * En portabilidad y colaboración se encontraron problemas ya que se realizo el proyecto en dos 
  computadores IOS pero con diferentes sistemas operativos, esto quiere decir que no se podian 
  realizar las mismas tareas de igual forma.
-
-
-
  
 ## bibliografía 
 
