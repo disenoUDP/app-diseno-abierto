@@ -85,14 +85,15 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(context) {
     return DefaultTabController(
-      initialIndex: 0,
+      // cambiar este valor a 0 !!
+      initialIndex: 1,
       length: 3,
       child: Scaffold(
         appBar: AppBar(
           centerTitle: true,
           title: const Text(
             '#disenoabiertoudp',
-            style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600, fontFamily: 'Poppins', color: Color(0xFFF801AE)),
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, fontFamily: 'Poppins', color: Color(0xFFF801AE)),
           ),
           backgroundColor: Colors.white,
           bottom: const TabBar(tabs: <Widget>[
@@ -116,7 +117,7 @@ class MyHomePage extends StatelessWidget {
                 if (snapshot.hasError) {
                   return const Center(
                     child: Text('An error has occurred!',
-                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500, fontFamily: 'Poppins'),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, fontFamily: 'Poppins'),
                     ),
                   );
                 } else if (snapshot.hasData) {
@@ -128,56 +129,168 @@ class MyHomePage extends StatelessWidget {
                 }
               },
             ),
-            Center(
+
+            SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+             child: Expanded(
               child: Column(
                 children: [
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Positioned(
+                      left: 21,
+                      top: 190,
+                      child: Padding(
+                        padding: const EdgeInsets.all(31.21),
+                        child: Stack(
+                          children: [
 
-                    const Padding(
+                            const Center(
+                              child: Text(
+                                'Mapa Diseño Abierto',
+                                style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600, fontFamily: 'Poppins', color: Color(0xFFF801AE)),
+                              ),
+                            ),
+
+                            // primera imagem svg
+                            SvgPicture.asset(
+                              'assets/mapa/planta1.svg',
+                              width: 540,
+                              height: 540,
+                            ),
+
+                            // primer texto
+                            const Positioned(
+                              top: 70,
+                              left: 0,
+                              child: Text(
+                                'Primera planta',
+                                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, fontFamily: 'Poppins', color: Color(0xFFF801AE)),
+                              ),
+                            ),  
+                            
+                            // segunda imagen svg
+                            SvgPicture.asset(
+                              'assets/mapa/planta2.svg',
+                              width: 400,
+                              height: 400,
+                            ),
+
+                            // segundo texto
+                            const Positioned(
+                              top: 500,
+                              left: 0,
+                              child: Text(
+                                'Segunda planta',
+                                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, fontFamily: 'Poppins', color: Color(0xFFF801AE)),
+                              ),
+                            ),
+
+                            // tercera imagen svg
+                             SvgPicture.asset(
+                              'assets/mapa/planta2.svg',
+                              width: 400,
+                              height: 400,
+                            ),
+
+                            // tercer texto
+                            const Positioned(
+                              top: 780,
+                              left: 0,
+                              child: Text(
+                                'Tercera planta',
+                                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, fontFamily: 'Poppins', color: Color(0xFFF801AE)),
+                              ),
+                            ),
+
+                          ],
+                        ),
+                      )
+                    )
+                  )
+                ],
+              
+              ),
+             ),
+            ),
+            // Align(
+            //   alignment: Alignment.topLeft,
+            //   child: Column(
+            //     children: [
+
+            //         const Padding(
 
                     // ver como poner el texto en la parte superior izquierda
-                    padding: EdgeInsets.all(10),
-                    child: Positioned(
-                      top: 10,
-                      left: 10,
-                      child: Text(
-                      textAlign: TextAlign.left,
-                      'Primera planta', 
-                      style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500, fontFamily: 'Poppins', color: Color(0xFFF801AE)),
-                    ),
-                   ),     
-                  ),
+                  //   padding: EdgeInsets.all(10),
+                  //   child: Positioned(
+                  //     left: 21,
+                  //     top: 190,
+                  //     child: Text(
+                  //     'Primera planta', 
+                  //     style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, fontFamily: 'Poppins', color: Color(0xFFF801AE)),
+                  //   ),
+                  //  ),     
+                  // ), 
 
-                  SvgPicture.asset(
-
-                    // revisar el mapa en illustrator
-                    'assets/mapa/planta1.svg',
-                    width: 400,
-                    height: 400,
-                  ),
-
-                  SvgPicture.asset(
-
-                    // revisar el mapa en illustrator
-                    'assets/mapa/planta2.svg',
-                    width: 400,
-                    height: 400,
-                  ),
-
-                  SvgPicture.asset(
-
-                    // revisar el mapa en illustrator
-                    'assets/mapa/planta3.svg',
-                    width: 400,
-                    height: 400,
-                  ),
+                  // SvgPicture.asset(
+                  //   // con stack se ponen los widget uno sobre otro
+                  //   'assets/mapa/planta1.svg',
+                  //   width: 400,
+                  //   height: 400,
+                  // ),
                   
-                ],
-              )
-            ),
+                  // const Padding(
+
+                  //   // ver como poner el texto en la parte superior izquierda
+                  //   padding: EdgeInsets.all(10),
+                  //   child: Positioned(
+                  //     top: 10,
+                  //     left: 10,
+                  //     child: Text(
+                  //     textAlign: TextAlign.left,
+                  //     'Segunda planta', 
+                  //     style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, fontFamily: 'Poppins', color: Color(0xFFF801AE)),
+                  //   ),
+                  //  ),     
+                  // ),
+                  
+                  // // ver scroll
+                  // SvgPicture.asset(
+
+                  //   'assets/mapa/planta2.svg',
+                  //   width: 400,
+                  //   height: 400,
+                  // ),
+
+                  // const Padding(
+
+                  //   // ver como poner el texto en la parte superior izquierda
+                  //   padding: EdgeInsets.all(10),
+                  //   child: Positioned(
+                  //     top: 10,
+                  //     left: 10,
+                  //     child: Text(
+                  //     textAlign: TextAlign.left,
+                  //     'Tercera planta', 
+                  //     style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, fontFamily: 'Poppins', color: Color(0xFFF801AE)),
+                  //   ),
+                  //  ),     
+                  // ),
+
+                  // SvgPicture.asset(
+
+                  //   'assets/mapa/planta3.svg',
+                  //   width: 400,
+                  //   height: 400,
+                  // ),
+                  
+            //     ],
+            //   )
+            // ),
             const Center(
               child: Text(
                 'Talleres',
-                style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500, fontFamily: 'Poppins'),
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, fontFamily: 'Poppins'),
               ),
             ),
           ],
