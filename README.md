@@ -4,7 +4,7 @@
 
 Proyecto creación de una aplicación móvil para la gestión de proyectos de diseño abierto en diseño UDP.
 
-Esta app cuenta con un mapa de la facultad de arte, arquitectura y diseño ubicada en salvador sanfuentes 2221, con el objetivo de ubicar las salas y los talleres.
+Esta app cuenta con un mapa de la facultad de arte, arquitectura y diseño UDP ubicada en salvador sanfuentes 2221, con el objetivo de ubicar las salas y los talleres.
 
 Cuenta con el detalle de los talleres de primero y segundo año, talleres verticales con sus  respectivos profesores y ayudante.
 
