@@ -4,10 +4,10 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-// import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 //import 'package:flutter/services.dart' show rootBundle;
 import 'package:http/http.dart' as http;
-import 'package:transparent_image/transparent_image.dart';
+// import 'package:transparent_image/transparent_image.dart';
 
 Future<String> loadAsset() async {
   // return rootBundle.loadString('assets/talleres.json');
@@ -33,6 +33,25 @@ List<Taller> parseTalleres(String responseBody) {
       (jsonDecode(responseBody) as List).cast<Map<String, dynamic>>();
 
   return parsed.map<Taller>((json) => Taller.fromJson(json)).toList();
+}
+
+class TalleresList extends StatelessWidget {
+  const TalleresList({super.key, required this.talleres});
+
+  final List<Taller> talleres;
+
+  @override
+  Widget build(BuildContext context) {
+    return GridView.builder(
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+      ),
+      itemCount: talleres.length,
+      itemBuilder: (context, index) {
+        return Image.network(talleres[index].thumbnailUrl);
+      },
+    );
+  }
 }
 
 class Taller {
@@ -148,54 +167,183 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ]),
         ),
-        body: Center(
-          // Center is a layout widget. It takes a single child and positions it
-          // in the middle of the parent.
-          child: Column(
-            // Column is also a layout widget. It takes a list of children and
-            // arranges them vertically. By default, it sizes itself to fit its
-            // children horizontally, and tries to be as tall as its parent.
-            //
-            // Column has various properties to control how it sizes itself and
-            // how it positions its children. Here we use mainAxisAlignment to
-            // center the children vertically; the main axis here is the vertical
-            // axis because Columns are vertical (the cross axis would be
-            // horizontal).
-            //
-            // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-            // action in the IDE, or press "p" in the console), to see the
-            // wireframe for each widget.
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Container(
-                alignment: Alignment.center,
-                width: 0.5 * MediaQuery.of(context).size.width,
-                height: 0.5 *
-                    (MediaQuery.of(context).size.height -
-                        MediaQuery.of(context).padding.top -
-                        MediaQuery.of(context).padding.bottom),
-                // height: 0.5 * MediaQuery.of(context).size.height,
-                // height: 0.25 * View.of(context).physicalSize.height,
-                child: FadeInImage.memoryNetwork(
-                    fit: BoxFit.cover,
-                    placeholder: kTransparentImage,
-                    image:
-                        'https://raw.githubusercontent.com/disenoUDP/assets/main/diseno-abierto/splash.png'),
+        body: TabBarView(
+          children: <Widget>[
+            FutureBuilder<List<Taller>>(
+              future: fetchTalleres(http.Client()),
+              builder: (context, snapshot) {
+                if (snapshot.hasError) {
+                  return const Center(
+                    child: Text(
+                      'An error has occurred!',
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: 'Poppins'),
+                    ),
+                  );
+                } else if (snapshot.hasData) {
+                  return TalleresList(talleres: snapshot.data!);
+                } else {
+                  return const Center(
+                    child: CircularProgressIndicator(),
+                  );
+                }
+              },
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Expanded(
+                child: Column(
+                  children: [
+                    Align(
+                        alignment: Alignment.topLeft,
+                        child: Positioned(
+                            left: 21,
+                            top: 190,
+                            child: Padding(
+                              padding: const EdgeInsets.all(31.21),
+                              child: Stack(
+                                children: [
+                                  const Center(
+                                    child: Text(
+                                      'Mapa Diseño Abierto',
+                                      style: TextStyle(
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.w600,
+                                          fontFamily: 'Poppins',
+                                          color: Color(0xFFF801AE)),
+                                    ),
+                                  ),
+
+                                  // primera imagem svg
+                                  SvgPicture.asset(
+                                    'assets/mapa/planta1.svg',
+                                    width: 540,
+                                    height: 540,
+                                  ),
+
+                                  // primer texto
+                                  const Positioned(
+                                    top: 70,
+                                    left: 0,
+                                    child: Text(
+                                      'Primera planta',
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w400,
+                                          fontFamily: 'Poppins',
+                                          color: Color(0xFFF801AE)),
+                                    ),
+                                  ),
+
+                                  // segunda imagen svg
+                                  SvgPicture.asset(
+                                    'assets/mapa/planta2.svg',
+                                    width: 400,
+                                    height: 400,
+                                  ),
+
+                                  // segundo texto
+                                  const Positioned(
+                                    top: 500,
+                                    left: 0,
+                                    child: Text(
+                                      'Segunda planta',
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w400,
+                                          fontFamily: 'Poppins',
+                                          color: Color(0xFFF801AE)),
+                                    ),
+                                  ),
+
+                                  // tercera imagen svg
+                                  SvgPicture.asset(
+                                    'assets/mapa/planta2.svg',
+                                    width: 400,
+                                    height: 400,
+                                  ),
+
+                                  // tercer texto
+                                  const Positioned(
+                                    top: 780,
+                                    left: 0,
+                                    child: Text(
+                                      'Tercera planta',
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w400,
+                                          fontFamily: 'Poppins',
+                                          color: Color(0xFFF801AE)),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            )))
+                  ],
+                ),
               ),
-              // FadeInImage.memoryNetwork(
-              //     fit: BoxFit.contain,
-              //     placeholder: kTransparentImage,
-              //     image:
-              //         'https://raw.githubusercontent.com/disenoUDP/assets/main/diseno-abierto/logo-escuela.png'),
-              Text('#disenoabiertoudp',
-                  style: Theme.of(context).textTheme.labelMedium),
-              Text('2023 diciembre 11-15',
-                  style: Theme.of(context).textTheme.labelMedium),
-              Text('salvador sanfuentes 2221',
-                  style: Theme.of(context).textTheme.labelMedium),
-            ],
-          ),
+            ),
+            const Center(
+              child: Text(
+                'Talleres',
+                style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    fontFamily: 'Poppins'),
+              ),
+            ),
+          ],
         ),
+        // Center(
+        //   // Center is a layout widget. It takes a single child and positions it
+        //   // in the middle of the parent.
+        //   child: Column(
+        //     // Column is also a layout widget. It takes a list of children and
+        //     // arranges them vertically. By default, it sizes itself to fit its
+        //     // children horizontally, and tries to be as tall as its parent.
+        //     //
+        //     // Column has various properties to control how it sizes itself and
+        //     // how it positions its children. Here we use mainAxisAlignment to
+        //     // center the children vertically; the main axis here is the vertical
+        //     // axis because Columns are vertical (the cross axis would be
+        //     // horizontal).
+        //     //
+        //     // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
+        //     // action in the IDE, or press "p" in the console), to see the
+        //     // wireframe for each widget.
+        //     mainAxisAlignment: MainAxisAlignment.center,
+        //     children: <Widget>[
+        //       Container(
+        //         alignment: Alignment.center,
+        //         width: 0.5 * MediaQuery.of(context).size.width,
+        //         height: 0.5 *
+        //             (MediaQuery.of(context).size.height -
+        //                 MediaQuery.of(context).padding.top -
+        //                 MediaQuery.of(context).padding.bottom),
+        //         // height: 0.5 * MediaQuery.of(context).size.height,
+        //         // height: 0.25 * View.of(context).physicalSize.height,
+        //         child: FadeInImage.memoryNetwork(
+        //             fit: BoxFit.cover,
+        //             placeholder: kTransparentImage,
+        //             image:
+        //                 'https://raw.githubusercontent.com/disenoUDP/assets/main/diseno-abierto/splash.png'),
+        //       ),
+        //       // FadeInImage.memoryNetwork(
+        //       //     fit: BoxFit.contain,
+        //       //     placeholder: kTransparentImage,
+        //       //     image:
+        //       //         'https://raw.githubusercontent.com/disenoUDP/assets/main/diseno-abierto/logo-escuela.png'),
+        //       Text('#disenoabiertoudp',
+        //           style: Theme.of(context).textTheme.labelMedium),
+        //       Text('2023 diciembre 11-15',
+        //           style: Theme.of(context).textTheme.labelMedium),
+        //       Text('salvador sanfuentes 2221',
+        //           style: Theme.of(context).textTheme.labelMedium),
+        //     ],
+        //   ),
+        // ),
       ),
     );
   }
