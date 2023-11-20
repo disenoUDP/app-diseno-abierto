@@ -3,20 +3,20 @@ import 'dart:convert';
 // import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+// import 'package:flutter/services.dart';
+// import 'package:flutter_svg/flutter_svg.dart';
 //import 'package:flutter/services.dart' show rootBundle;
 import 'package:http/http.dart' as http;
 import 'package:transparent_image/transparent_image.dart';
 
-Future<String> loadAsset() async {
-  // return rootBundle.loadString('assets/talleres.json');
-  return rootBundle.loadString('assets/photos.json');
-}
+// Future<String> loadAsset() async {
+//   // return rootBundle.loadString('assets/talleres.json');
+//   return rootBundle.loadString('assets/photos.json');
+// }
 
 Future<List<Taller>> fetchTalleres(http.Client client) async {
   final response = await client.get(Uri.parse(
-      'https://raw.githubusercontent.com/janisepulveda/app-diseno-abierto/main/mapa_diseno_abierto/assets/photos.json'));
+      'https://raw.githubusercontent.com/disenoUDP/assets/main/diseno-abierto/talleres.json'));
   if (response.statusCode == 200) {
     // If the server did return a 200 OK response, then parse the JSON.
     //return Taller.fromJson(jsonDecode(response.body));
@@ -55,24 +55,16 @@ class TalleresList extends StatelessWidget {
 }
 
 class Taller {
-  final int albumId;
-  final int id;
-  final String title;
+  final String sigla;
   final String url;
   final String thumbnailUrl;
 
   const Taller(
-      {required this.albumId,
-      required this.id,
-      required this.title,
-      required this.url,
-      required this.thumbnailUrl});
+      {required this.sigla, required this.url, required this.thumbnailUrl});
 
   factory Taller.fromJson(Map<String, dynamic> json) {
     return Taller(
-      albumId: json['albumId'] as int,
-      id: json['id'] as int,
-      title: json['title'] as String,
+      sigla: json['sigla'] as String,
       url: json['url'] as String,
       thumbnailUrl: json['thumbnailUrl'] as String,
     );
