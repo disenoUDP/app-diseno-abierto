@@ -127,7 +127,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         // This is the theme of your application.
         colorScheme: ColorScheme.fromSeed(
-            seedColor: const Color.fromRGBO(248, 1, 174, 1)),
+            seedColor: const Color.fromRGBO(0, 94, 184, 1)),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: appTitle),
@@ -597,6 +597,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    const iconColor = Color(0xFF005EB8);
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
 
@@ -615,25 +616,24 @@ class _MyHomePageState extends State<MyHomePage> {
                 fontSize: 16,
                 fontWeight: FontWeight.w600,
                 fontFamily: 'Poppins',
-                color: Color(0xFFF801AE)),
+                color: Color(0xFF005EB8)),
           ),
           backgroundColor: Colors.white,
           bottom: const TabBar(tabs: <Widget>[
             Tab(
-              icon: Icon(Icons.home_outlined, color: Color(0xFFF801AE)),
+              icon: Icon(Icons.home_outlined, color: iconColor),
               text: 'Inicio',
             ),
             Tab(
-              icon: Icon(Icons.room_outlined, color: Color(0xFFF801AE)),
+              icon: Icon(Icons.room_outlined, color: iconColor),
               text: 'Mapa',
             ),
             Tab(
-                icon:
-                    Icon(Icons.auto_awesome_outlined, color: Color(0xFFF801AE)),
+                icon: Icon(Icons.auto_awesome_outlined, color: iconColor),
                 text: 'Talleres'),
             Tab(
-                icon: Icon(Icons.auto_awesome_motion_outlined,
-                    color: Color(0xFFF801AE)),
+                icon:
+                    Icon(Icons.auto_awesome_motion_outlined, color: iconColor),
                 text: 'Proyectos'),
           ]),
         ),
