@@ -605,7 +605,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // 0 para que parta al principio
       initialIndex: 0,
       // 0 es el inicio, 1 es el mapa, 2 son los proyectos
-      length: 3,
+      length: 4,
       child: Scaffold(
         appBar: AppBar(
           centerTitle: true,
@@ -620,15 +620,19 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Colors.white,
           bottom: const TabBar(tabs: <Widget>[
             Tab(
-              icon:
-                  Icon(Icons.maps_home_work_outlined, color: Color(0xFFF801AE)),
+              icon: Icon(Icons.home_outlined, color: Color(0xFFF801AE)),
+              text: 'Inicio',
             ),
             Tab(
               icon: Icon(Icons.map_outlined, color: Color(0xFFF801AE)),
+              text: 'Mapa',
             ),
             Tab(
-              icon: Icon(Icons.checklist_outlined, color: Color(0xFFF801AE)),
-            ),
+                icon: Icon(Icons.checklist_outlined, color: Color(0xFFF801AE)),
+                text: 'Talleres'),
+            Tab(
+                icon: Icon(Icons.checklist_outlined, color: Color(0xFFF801AE)),
+                text: 'Proyectos'),
           ]),
         ),
         body: TabBarView(
@@ -741,6 +745,28 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             // pos2
+            FutureBuilder<List<Taller>>(
+              future: fetchTalleres(http.Client()),
+              builder: (context, snapshot) {
+                if (snapshot.hasError) {
+                  return const Center(
+                    child: Text(
+                      'cargando info...!',
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: 'Poppins'),
+                    ),
+                  );
+                } else if (snapshot.hasData) {
+                  return TalleresList(talleres: snapshot.data!);
+                } else {
+                  return const Center(
+                    child: CircularProgressIndicator(),
+                  );
+                }
+              },
+            ),
             FutureBuilder<List<Taller>>(
               future: fetchTalleres(http.Client()),
               builder: (context, snapshot) {
