@@ -7,7 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 //import 'package:flutter/services.dart' show rootBundle;
 import 'package:http/http.dart' as http;
-// import 'package:transparent_image/transparent_image.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 Future<String> loadAsset() async {
   // return rootBundle.loadString('assets/talleres.json');
@@ -204,13 +204,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                           color: Color(0xFFF801AE)),
                                     ),
                                   ),
-
-                                  // primera imagem svg
-                                  SvgPicture.asset(
-                                    'assets/mapa/planta1.svg',
-                                    width: 540,
-                                    height: 540,
-                                  ),
+                                  FadeInImage.memoryNetwork(
+                                      fit: BoxFit.contain,
+                                      placeholder: kTransparentImage,
+                                      width: 540,
+                                      height: 540,
+                                      image:
+                                          'https://raw.githubusercontent.com/disenoUDP/assets/main/diseno-abierto/mapa/planta1.png'),
 
                                   // primer texto
                                   const Positioned(
@@ -226,12 +226,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                     ),
                                   ),
 
-                                  // segunda imagen svg
-                                  SvgPicture.asset(
-                                    'assets/mapa/planta2.svg',
-                                    width: 400,
-                                    height: 400,
-                                  ),
+                                  FadeInImage.memoryNetwork(
+                                      fit: BoxFit.contain,
+                                      placeholder: kTransparentImage,
+                                      width: 400,
+                                      height: 400,
+                                      image:
+                                          'https://raw.githubusercontent.com/disenoUDP/assets/main/diseno-abierto/mapa/planta2.png'),
 
                                   // segundo texto
                                   const Positioned(
@@ -247,12 +248,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                     ),
                                   ),
 
-                                  // tercera imagen svg
-                                  SvgPicture.asset(
-                                    'assets/mapa/planta2.svg',
-                                    width: 400,
-                                    height: 400,
-                                  ),
+                                  FadeInImage.memoryNetwork(
+                                      fit: BoxFit.contain,
+                                      placeholder: kTransparentImage,
+                                      width: 400,
+                                      height: 400,
+                                      image:
+                                          'https://raw.githubusercontent.com/disenoUDP/assets/main/diseno-abierto/mapa/planta3.png'),
 
                                   // tercer texto
                                   const Positioned(
