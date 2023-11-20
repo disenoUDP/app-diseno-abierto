@@ -48,7 +48,12 @@ class TalleresList extends StatelessWidget {
       ),
       itemCount: talleres.length,
       itemBuilder: (context, index) {
-        return Image.network(talleres[index].thumbnailUrl);
+        return Image.network(
+          talleres[index].thumbnailUrl,
+          width: 10,
+          height: 10,
+        );
+        // return Image.network(src)
       },
     );
   }
@@ -292,7 +297,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 if (snapshot.hasError) {
                   return const Center(
                     child: Text(
-                      'An error has occurred!',
+                      'cargando info...!',
                       style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
