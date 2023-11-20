@@ -602,7 +602,17 @@ class _MyHomePageState extends State<MyHomePage> {
     const colorHeader = Color(0xFF005EB8);
     const colorSubheader = Color(0xFF005EB8);
 
-    const espacioEntreTextoInicio = 20;
+    BoxDecoration decoracionInicio = BoxDecoration(
+        color: Colors.white,
+        border: Border.all(color: colorSubheader),
+        boxShadow: const [
+          BoxShadow(
+            color: Colors.pink,
+            blurRadius: 3,
+            offset: Offset(4, 8), // Shadow position
+          ),
+        ]);
+
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
 
@@ -645,45 +655,65 @@ class _MyHomePageState extends State<MyHomePage> {
         body: TabBarView(
           children: <Widget>[
             // pos0
-            const Column(
+            Column(
               children: [
-                Spacer(),
-                Text(
-                  'diseño abierto es una muestra semestral de los resultados de taller por los estudiantes de la Escuela de Diseño UDP.',
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      fontFamily: 'Poppins',
-                      color: colorSubheader),
+                const Spacer(),
+                Container(
+                  margin: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(10.0),
+                  decoration: decoracionInicio,
+                  child: const Text(
+                    'diseño abierto es una muestra semestral de los resultados de taller por los estudiantes de la Escuela de Diseño UDP.',
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: 'Poppins',
+                        color: colorSubheader),
+                  ),
                 ),
-                Spacer(),
-                Text(
-                  'la app se actualizará cada semestre, con el objetivo de tener un registro de la historia de los trabajos de taller.',
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      fontFamily: 'Poppins',
-                      color: colorSubheader),
+                const Spacer(),
+                Container(
+                  margin: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(10.0),
+                  decoration: decoracionInicio,
+                  child: const Text(
+                    'la app se actualizará cada semestre, con el objetivo de tener un registro de la historia de los trabajos de taller.',
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: 'Poppins',
+                        color: colorSubheader),
+                  ),
                 ),
-                Spacer(),
-                Text(
-                  'esta app está siendo desarrollada por @janisepulveda, estudiante de diseño UDP, y @montoyamoraga, profesore asistente de diseño UDP.',
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      fontFamily: 'Poppins',
-                      color: colorSubheader),
+                const Spacer(),
+                Container(
+                  margin: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(10.0),
+                  decoration: decoracionInicio,
+                  child: const Text(
+                    'esta app está siendo desarrollada por @janisepulveda, estudiante de diseño UDP, y @montoyamoraga, profesore asistente de diseño UDP.',
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: 'Poppins',
+                        color: colorSubheader),
+                  ),
                 ),
-                Spacer(),
-                Text(
-                  'esta es la versión 0.0.1. desarrollada en Flutter con el sistema de diseño Material Design 3 de Google, con el apoyo de fondos de Vicerrectoría académica UDP.',
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      fontFamily: 'Poppins',
-                      color: colorSubheader),
+                const Spacer(),
+                Container(
+                  margin: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(10.0),
+                  decoration: decoracionInicio,
+                  child: const Text(
+                    'esta es la versión 0.0.1. desarrollada en Flutter con el sistema de diseño Material Design 3 de Google, con el apoyo de fondos de Vicerrectoría académica UDP.',
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: 'Poppins',
+                        color: colorSubheader),
+                  ),
                 ),
-                Spacer(),
+                const Spacer(),
               ],
             ),
             // pos1
