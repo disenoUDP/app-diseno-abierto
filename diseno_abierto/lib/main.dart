@@ -597,7 +597,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    const iconColor = Color(0xFF005EB8);
+    const colorIcon = Color(0xFF005EB8);
+    const colorHeader = Color(0xFF005EB8);
+    const colorSubheader = Color(0xFF005EB8);
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
 
@@ -616,24 +618,24 @@ class _MyHomePageState extends State<MyHomePage> {
                 fontSize: 16,
                 fontWeight: FontWeight.w600,
                 fontFamily: 'Poppins',
-                color: Color(0xFF005EB8)),
+                color: colorHeader),
           ),
           backgroundColor: Colors.white,
           bottom: const TabBar(tabs: <Widget>[
             Tab(
-              icon: Icon(Icons.home_outlined, color: iconColor),
+              icon: Icon(Icons.home_outlined, color: colorIcon),
               text: 'Inicio',
             ),
             Tab(
-              icon: Icon(Icons.room_outlined, color: iconColor),
+              icon: Icon(Icons.room_outlined, color: colorIcon),
               text: 'Mapa',
             ),
             Tab(
-                icon: Icon(Icons.auto_awesome_outlined, color: iconColor),
+                icon: Icon(Icons.auto_awesome_outlined, color: colorIcon),
                 text: 'Talleres'),
             Tab(
                 icon:
-                    Icon(Icons.auto_awesome_motion_outlined, color: iconColor),
+                    Icon(Icons.auto_awesome_motion_outlined, color: colorIcon),
                 text: 'Proyectos'),
           ]),
         ),
@@ -664,16 +666,6 @@ class _MyHomePageState extends State<MyHomePage> {
                               padding: const EdgeInsets.all(31.21),
                               child: Stack(
                                 children: [
-                                  const Center(
-                                    child: Text(
-                                      'Mapa Diseño Abierto',
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          fontWeight: FontWeight.w600,
-                                          fontFamily: 'Poppins',
-                                          color: Color(0xFFF801AE)),
-                                    ),
-                                  ),
                                   FadeInImage.memoryNetwork(
                                       fit: BoxFit.contain,
                                       placeholder: kTransparentImage,
@@ -692,7 +684,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                           fontSize: 16,
                                           fontWeight: FontWeight.w400,
                                           fontFamily: 'Poppins',
-                                          color: Color(0xFFF801AE)),
+                                          color: colorSubheader),
                                     ),
                                   ),
 
@@ -714,7 +706,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                           fontSize: 16,
                                           fontWeight: FontWeight.w400,
                                           fontFamily: 'Poppins',
-                                          color: Color(0xFFF801AE)),
+                                          color: colorSubheader),
                                     ),
                                   ),
 
@@ -736,7 +728,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                           fontSize: 16,
                                           fontWeight: FontWeight.w400,
                                           fontFamily: 'Poppins',
-                                          color: Color(0xFFF801AE)),
+                                          color: colorSubheader),
                                     ),
                                   ),
                                 ],
