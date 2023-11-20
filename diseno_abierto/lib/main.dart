@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+// import 'dart:ffi';
 // import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -600,6 +601,8 @@ class _MyHomePageState extends State<MyHomePage> {
     const colorIcon = Color(0xFF005EB8);
     const colorHeader = Color(0xFF005EB8);
     const colorSubheader = Color(0xFF005EB8);
+
+    const espacioEntreTextoInicio = 20;
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
 
@@ -642,14 +645,46 @@ class _MyHomePageState extends State<MyHomePage> {
         body: TabBarView(
           children: <Widget>[
             // pos0
-            const Center(
-              child: Text(
-                'Talleres',
-                style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    fontFamily: 'Poppins'),
-              ),
+            const Column(
+              children: [
+                Spacer(),
+                Text(
+                  'diseño abierto es una muestra semestral de los resultados de taller por los estudiantes de la Escuela de Diseño UDP.',
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      fontFamily: 'Poppins',
+                      color: colorSubheader),
+                ),
+                Spacer(),
+                Text(
+                  'la app se actualizará cada semestre, con el objetivo de tener un registro de la historia de los trabajos de taller.',
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      fontFamily: 'Poppins',
+                      color: colorSubheader),
+                ),
+                Spacer(),
+                Text(
+                  'esta app está siendo desarrollada por @janisepulveda, estudiante de diseño UDP, y @montoyamoraga, profesore asistente de diseño UDP.',
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      fontFamily: 'Poppins',
+                      color: colorSubheader),
+                ),
+                Spacer(),
+                Text(
+                  'esta es la versión 0.0.1. desarrollada en Flutter con el sistema de diseño Material Design 3 de Google, con el apoyo de fondos de Vicerrectoría académica UDP.',
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      fontFamily: 'Poppins',
+                      color: colorSubheader),
+                ),
+                Spacer(),
+              ],
             ),
             // pos1
             SingleChildScrollView(
