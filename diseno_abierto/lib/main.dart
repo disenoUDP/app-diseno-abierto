@@ -753,7 +753,16 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   );
                 } else if (snapshot.hasData) {
-                  return TalleresList(talleres: snapshot.data!);
+                  //return TalleresList(talleres: snapshot.data!);
+                  // return const Text("bla");
+                  return Stack(
+                    children: [
+                      TalleresList(talleres: snapshot.data!),
+                      const Text("bla"),
+                    ],
+                    // TalleresList(talleres: snapshot.data!),
+                    // Text("bla"),
+                  );
                 } else {
                   return const Center(
                     child: CircularProgressIndicator(),
@@ -761,6 +770,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 }
               },
             ),
+            // pos3
             FutureBuilder<List<Taller>>(
               future: fetchTalleres(http.Client()),
               builder: (context, snapshot) {
