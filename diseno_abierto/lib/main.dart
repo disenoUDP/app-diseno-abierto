@@ -604,7 +604,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return DefaultTabController(
       // 0 para que parta al principio
       initialIndex: 0,
-      // 0 es el inicio, 1 es el mapa, 2 son los proyectos
+      // 0 es el inicio, 1 es el mapa, 2 son los talleres, 3 son los proyectos
       length: 4,
       child: Scaffold(
         appBar: AppBar(
@@ -624,14 +624,16 @@ class _MyHomePageState extends State<MyHomePage> {
               text: 'Inicio',
             ),
             Tab(
-              icon: Icon(Icons.map_outlined, color: Color(0xFFF801AE)),
+              icon: Icon(Icons.room_outlined, color: Color(0xFFF801AE)),
               text: 'Mapa',
             ),
             Tab(
-                icon: Icon(Icons.checklist_outlined, color: Color(0xFFF801AE)),
+                icon:
+                    Icon(Icons.auto_awesome_outlined, color: Color(0xFFF801AE)),
                 text: 'Talleres'),
             Tab(
-                icon: Icon(Icons.checklist_outlined, color: Color(0xFFF801AE)),
+                icon: Icon(Icons.auto_awesome_motion_outlined,
+                    color: Color(0xFFF801AE)),
                 text: 'Proyectos'),
           ]),
         ),
