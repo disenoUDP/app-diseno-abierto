@@ -169,28 +169,17 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: TabBarView(
           children: <Widget>[
-            FutureBuilder<List<Taller>>(
-              future: fetchTalleres(http.Client()),
-              builder: (context, snapshot) {
-                if (snapshot.hasError) {
-                  return const Center(
-                    child: Text(
-                      'An error has occurred!',
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                          fontFamily: 'Poppins'),
-                    ),
-                  );
-                } else if (snapshot.hasData) {
-                  return TalleresList(talleres: snapshot.data!);
-                } else {
-                  return const Center(
-                    child: CircularProgressIndicator(),
-                  );
-                }
-              },
+            // pos0
+            const Center(
+              child: Text(
+                'Talleres',
+                style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    fontFamily: 'Poppins'),
+              ),
             ),
+            // pos1
             SingleChildScrollView(
               scrollDirection: Axis.vertical,
               child: Expanded(
@@ -285,14 +274,28 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            const Center(
-              child: Text(
-                'Talleres',
-                style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    fontFamily: 'Poppins'),
-              ),
+            // pos2
+            FutureBuilder<List<Taller>>(
+              future: fetchTalleres(http.Client()),
+              builder: (context, snapshot) {
+                if (snapshot.hasError) {
+                  return const Center(
+                    child: Text(
+                      'An error has occurred!',
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: 'Poppins'),
+                    ),
+                  );
+                } else if (snapshot.hasData) {
+                  return TalleresList(talleres: snapshot.data!);
+                } else {
+                  return const Center(
+                    child: CircularProgressIndicator(),
+                  );
+                }
+              },
             ),
           ],
         ),
