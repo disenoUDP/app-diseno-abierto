@@ -116,62 +116,85 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
-    return Scaffold(
-      appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              alignment: Alignment.center,
-              width: 0.5 * MediaQuery.of(context).size.width,
-              height: 0.5 *
-                  (MediaQuery.of(context).size.height -
-                      MediaQuery.of(context).padding.top -
-                      MediaQuery.of(context).padding.bottom),
-              // height: 0.5 * MediaQuery.of(context).size.height,
-              // height: 0.25 * View.of(context).physicalSize.height,
-              child: FadeInImage.memoryNetwork(
-                  fit: BoxFit.cover,
-                  placeholder: kTransparentImage,
-                  image:
-                      'https://raw.githubusercontent.com/disenoUDP/assets/main/diseno-abierto/splash.png'),
+
+    // https://api.flutter.dev/flutter/material/DefaultTabController-class.html
+    return DefaultTabController(
+      // 0 para que parta al principio
+      initialIndex: 0,
+      // 0 es el inicio, 1 es el mapa, 2 son los proyectos
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          title: const Text(
+            '#disenoabiertoudp',
+            style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+                fontFamily: 'Poppins',
+                color: Color(0xFFF801AE)),
+          ),
+          backgroundColor: Colors.white,
+          bottom: const TabBar(tabs: <Widget>[
+            Tab(
+              icon:
+                  Icon(Icons.maps_home_work_outlined, color: Color(0xFFF801AE)),
             ),
-            // FadeInImage.memoryNetwork(
-            //     fit: BoxFit.contain,
-            //     placeholder: kTransparentImage,
-            //     image:
-            //         'https://raw.githubusercontent.com/disenoUDP/assets/main/diseno-abierto/logo-escuela.png'),
-            Text('#disenoabiertoudp',
-                style: Theme.of(context).textTheme.labelMedium),
-            Text('2023 diciembre 11-15',
-                style: Theme.of(context).textTheme.labelMedium),
-            Text('salvador sanfuentes 2221',
-                style: Theme.of(context).textTheme.labelMedium),
-          ],
+            Tab(
+              icon: Icon(Icons.map_outlined, color: Color(0xFFF801AE)),
+            ),
+            Tab(
+              icon: Icon(Icons.checklist_outlined, color: Color(0xFFF801AE)),
+            ),
+          ]),
+        ),
+        body: Center(
+          // Center is a layout widget. It takes a single child and positions it
+          // in the middle of the parent.
+          child: Column(
+            // Column is also a layout widget. It takes a list of children and
+            // arranges them vertically. By default, it sizes itself to fit its
+            // children horizontally, and tries to be as tall as its parent.
+            //
+            // Column has various properties to control how it sizes itself and
+            // how it positions its children. Here we use mainAxisAlignment to
+            // center the children vertically; the main axis here is the vertical
+            // axis because Columns are vertical (the cross axis would be
+            // horizontal).
+            //
+            // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
+            // action in the IDE, or press "p" in the console), to see the
+            // wireframe for each widget.
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                alignment: Alignment.center,
+                width: 0.5 * MediaQuery.of(context).size.width,
+                height: 0.5 *
+                    (MediaQuery.of(context).size.height -
+                        MediaQuery.of(context).padding.top -
+                        MediaQuery.of(context).padding.bottom),
+                // height: 0.5 * MediaQuery.of(context).size.height,
+                // height: 0.25 * View.of(context).physicalSize.height,
+                child: FadeInImage.memoryNetwork(
+                    fit: BoxFit.cover,
+                    placeholder: kTransparentImage,
+                    image:
+                        'https://raw.githubusercontent.com/disenoUDP/assets/main/diseno-abierto/splash.png'),
+              ),
+              // FadeInImage.memoryNetwork(
+              //     fit: BoxFit.contain,
+              //     placeholder: kTransparentImage,
+              //     image:
+              //         'https://raw.githubusercontent.com/disenoUDP/assets/main/diseno-abierto/logo-escuela.png'),
+              Text('#disenoabiertoudp',
+                  style: Theme.of(context).textTheme.labelMedium),
+              Text('2023 diciembre 11-15',
+                  style: Theme.of(context).textTheme.labelMedium),
+              Text('salvador sanfuentes 2221',
+                  style: Theme.of(context).textTheme.labelMedium),
+            ],
+          ),
         ),
       ),
     );
