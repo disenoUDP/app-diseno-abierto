@@ -1,7 +1,7 @@
 import 'archivos.dart' as archivos;
 import 'estilo.dart' as estilo;
 import 'inicio.dart' as inicio;
-import 'taller_prob.dart' as taller;
+import 'taller.dart' as taller;
 
 import 'dart:async';
 import 'dart:convert';
