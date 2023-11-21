@@ -7,20 +7,16 @@ import 'package:flutter/material.dart';
 class Proyecto {
   final String sigla;
   final String nombre;
-  final String docentePrincipal;
-  final String docenteAuxiliar;
-  final String ayudante;
-  final String nivel;
+  final String estudiante;
+  final String texto;
   final String url;
   final String thumbnailUrl;
 
   const Proyecto(
       {required this.sigla,
       required this.nombre,
-      required this.docentePrincipal,
-      required this.docenteAuxiliar,
-      required this.ayudante,
-      required this.nivel,
+      required this.estudiante,
+      required this.texto,
       required this.url,
       required this.thumbnailUrl});
 
@@ -28,10 +24,8 @@ class Proyecto {
     return Proyecto(
       sigla: json['sigla'] as String,
       nombre: json['nombre'] as String,
-      docentePrincipal: json['docentePrincipal'] as String,
-      docenteAuxiliar: json['docenteAuxiliar'] as String,
-      ayudante: json['ayudante'] as String,
-      nivel: json['nivel'] as String,
+      estudiante: json['estudiante'] as String,
+      texto: json['texto'] as String,
       url: json['url'] as String,
       thumbnailUrl: json['thumbnailUrl'] as String,
     );
