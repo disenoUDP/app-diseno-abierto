@@ -3,10 +3,11 @@ import 'barra_arriba.dart' as barra_arriba;
 import 'estilo.dart' as estilo;
 import 'inicio.dart' as inicio;
 import 'plantas.dart' as plantas;
-import 'taller.dart' as taller;
+import 'proyectos.dart' as proyectos;
+import 'talleres.dart' as talleres;
 
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+// import 'package:http/http.dart' as http;
 // import 'package:transparent_image/transparent_image.dart';
 // import 'package:url_launcher/url_launcher.dart';
 
@@ -60,56 +61,14 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: barra_arriba.barra,
         body: TabBarView(
           children: <Widget>[
+            // pos0
             inicio.cajitasBienvenida,
+            // pos1
             plantas.selectorMapas,
             // pos2
-            FutureBuilder<List<taller.Taller>>(
-              future: taller.fetchTalleres(http.Client()),
-              builder: (context, snapshot) {
-                if (snapshot.hasError) {
-                  return const Center(
-                    child: Text(
-                      'cargando info...!',
-                      style: estilo.estiloTextoCargando,
-                    ),
-                  );
-                } else if (snapshot.hasData) {
-                  //return TalleresList(talleres: snapshot.data!);
-                  return Stack(
-                    children: [
-                      taller.TalleresList(talleres: snapshot.data!),
-                      const Text("bla"),
-                    ],
-                    // TalleresList(talleres: snapshot.data!),
-                    // Text("bla"),
-                  );
-                } else {
-                  return const Center(
-                    child: CircularProgressIndicator(),
-                  );
-                }
-              },
-            ),
+            talleres.listaTalleres,
             // pos3
-            FutureBuilder<List<taller.Taller>>(
-              future: taller.fetchTalleres(http.Client()),
-              builder: (context, snapshot) {
-                if (snapshot.hasError) {
-                  return const Center(
-                    child: Text(
-                      'cargando info...!',
-                      style: estilo.estiloTextoCargando,
-                    ),
-                  );
-                } else if (snapshot.hasData) {
-                  return taller.TalleresList(talleres: snapshot.data!);
-                } else {
-                  return const Center(
-                    child: CircularProgressIndicator(),
-                  );
-                }
-              },
-            ),
+            proyectos.listaProyectos
           ],
         ),
       ),
