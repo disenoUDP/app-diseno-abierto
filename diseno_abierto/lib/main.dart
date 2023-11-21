@@ -1,4 +1,5 @@
 // import 'archivos.dart' as archivos;
+import 'barra_arriba.dart' as barra_arriba;
 import 'estilo.dart' as estilo;
 import 'inicio.dart' as inicio;
 import 'plantas.dart' as plantas;
@@ -56,32 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // 0 es el inicio, 1 es el mapa, 2 son los talleres, 3 son los proyectos
       length: 4,
       child: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: const Text(
-            '#disenoabiertoudp',
-            style: estilo.estiloHeader,
-          ),
-          backgroundColor: estilo.colorFondo,
-          bottom: const TabBar(tabs: <Widget>[
-            Tab(
-              icon: Icon(Icons.home_outlined, color: estilo.colorIcono),
-              text: 'inicio',
-            ),
-            Tab(
-              icon: Icon(Icons.room_outlined, color: estilo.colorIcono),
-              text: 'mapa',
-            ),
-            Tab(
-                icon:
-                    Icon(Icons.auto_awesome_outlined, color: estilo.colorIcono),
-                text: 'talleres'),
-            Tab(
-                icon: Icon(Icons.auto_awesome_motion_outlined,
-                    color: estilo.colorIcono),
-                text: 'proyectos'),
-          ]),
-        ),
+        appBar: barra_arriba.barra,
         body: TabBarView(
           children: <Widget>[
             // pos0
