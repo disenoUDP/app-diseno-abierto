@@ -42,46 +42,6 @@ List<taller.Taller> parseTalleres(String responseBody) {
       .toList();
 }
 
-class TalleresList extends StatelessWidget {
-  const TalleresList({super.key, required this.talleres});
-
-  final List<taller.Taller> talleres;
-
-  @override
-  Widget build(BuildContext context) {
-    return GridView.builder(
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-      ),
-      itemCount: talleres.length,
-      itemBuilder: (context, index) {
-        // return Image.network(
-        //   talleres[index].thumbnailUrl,
-        //
-        // referencia
-        // https://gallery.flutter.dev/#/demo/card
-
-        return InkWell(
-          child: Card(
-              child: Column(
-            children: [
-              Image.network(talleres[index].thumbnailUrl),
-              Text(talleres[index].sigla),
-              Text(talleres[index].nombre,
-                  style: Theme.of(context).textTheme.labelSmall),
-            ],
-          )),
-        );
-
-        // return Card(
-        //     child: Image.network(
-        //   talleres[index].thumbnailUrl,
-        // ));
-      },
-    );
-  }
-}
-
 void main() {
   runApp(const MyApp());
 }
@@ -348,7 +308,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   //return TalleresList(talleres: snapshot.data!);
                   return Stack(
                     children: [
-                      TalleresList(talleres: snapshot.data!),
+                      taller.TalleresList(talleres: snapshot.data!),
                       const Text("bla"),
                     ],
                     // TalleresList(talleres: snapshot.data!),
@@ -376,7 +336,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   );
                 } else if (snapshot.hasData) {
-                  return TalleresList(talleres: snapshot.data!);
+                  return taller.TalleresList(talleres: snapshot.data!);
                 } else {
                   return const Center(
                     child: CircularProgressIndicator(),
