@@ -86,16 +86,16 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     const colorSubheader = Color(0xFF005EB8);
 
-    BoxDecoration decoracionInicio = BoxDecoration(
-        color: Colors.white,
-        border: Border.all(color: colorSubheader),
-        boxShadow: const [
-          BoxShadow(
-            color: estilo.sombra,
-            blurRadius: 3,
-            offset: Offset(4, 8), // Shadow position
-          ),
-        ]);
+    // BoxDecoration decoracionInicio = BoxDecoration(
+    //     color: Colors.white,
+    //     border: Border.all(color: colorSubheader),
+    //     boxShadow: const [
+    //       BoxShadow(
+    //         color: estilo.sombra,
+    //         blurRadius: 3,
+    //         offset: Offset(4, 8), // Shadow position
+    //       ),
+    //     ]);
 
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
@@ -142,17 +142,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   margin: const EdgeInsets.all(10.0),
                   padding: const EdgeInsets.all(10.0),
-                  decoration: decoracionInicio,
+                  decoration: estilo.decoracionInicio,
                   child: InkWell(
                     onTap: () => launchUrl(Uri.parse(
                         'https://www.instagram.com/explore/tags/disenoabiertoudp/')),
                     child: const Text(
                       inicio.definicionDisenoAbierto,
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                          fontFamily: 'Poppins',
-                          color: colorSubheader),
+                      style: estilo.estiloTextoInicio,
                     ),
                   ),
                   // const Text(
@@ -168,42 +164,30 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   margin: const EdgeInsets.all(10.0),
                   padding: const EdgeInsets.all(10.0),
-                  decoration: decoracionInicio,
+                  decoration: estilo.decoracionInicio,
                   child: const Text(
                     inicio.definicionApp,
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        fontFamily: 'Poppins',
-                        color: colorSubheader),
+                    style: estilo.estiloTextoInicio,
                   ),
                 ),
                 const Spacer(),
                 Container(
                   margin: const EdgeInsets.all(10.0),
                   padding: const EdgeInsets.all(10.0),
-                  decoration: decoracionInicio,
+                  decoration: estilo.decoracionInicio,
                   child: const Text(
                     inicio.creditosApp,
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        fontFamily: 'Poppins',
-                        color: colorSubheader),
+                    style: estilo.estiloTextoInicio,
                   ),
                 ),
                 const Spacer(),
                 Container(
                   margin: const EdgeInsets.all(10.0),
                   padding: const EdgeInsets.all(10.0),
-                  decoration: decoracionInicio,
+                  decoration: estilo.decoracionInicio,
                   child: const Text(
                     inicio.materialesApp,
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        fontFamily: 'Poppins',
-                        color: colorSubheader),
+                    style: estilo.estiloTextoInicio,
                   ),
                 ),
                 const Spacer(),
