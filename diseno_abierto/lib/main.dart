@@ -60,53 +60,8 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: barra_arriba.barra,
         body: TabBarView(
           children: <Widget>[
-            // pos0
             inicio.cajitasBienvenida,
-            // pos1
             plantas.selectorMapas,
-            // SingleChildScrollView(
-            //   scrollDirection: Axis.vertical,
-            //   child: Expanded(
-            //     child: Column(
-            //       children: [
-            //         Align(
-            //             alignment: Alignment.topLeft,
-            //             child: Positioned(
-            //                 left: 21,
-            //                 top: 190,
-            //                 child: Padding(
-            //                   padding: const EdgeInsets.all(31.21),
-            //                   child: Stack(
-            //                     children: [
-            //                       FadeInImage.memoryNetwork(
-            //                           fit: BoxFit.contain,
-            //                           placeholder: kTransparentImage,
-            //                           width: 540,
-            //                           height: 540,
-            //                           image: archivos.imagenPlanta1),
-            //                       // primer texto
-            //                       FadeInImage.memoryNetwork(
-            //                           fit: BoxFit.contain,
-            //                           placeholder: kTransparentImage,
-            //                           width: 400,
-            //                           height: 400,
-            //                           image: archivos.imagenPlanta2),
-            //                       // segundo texto
-
-            //                       FadeInImage.memoryNetwork(
-            //                           fit: BoxFit.contain,
-            //                           placeholder: kTransparentImage,
-            //                           width: 400,
-            //                           height: 400,
-            //                           image: archivos.imagenPlanta3),
-
-            //                     ],
-            //                   ),
-            //                 )))
-            //       ],
-            //     ),
-            //   ),
-            // ),
             // pos2
             FutureBuilder<List<taller.Taller>>(
               future: taller.fetchTalleres(http.Client()),
