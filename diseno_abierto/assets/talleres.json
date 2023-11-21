@@ -1,0 +1,182 @@
+{
+    "version": "0.0.1",
+    "periodo": "2023-02",
+    "talleres": {
+      "taller-00": {
+        "sigla": "DIS8637",
+        "nombre": "Taller de experiencia de usuario",
+        "docente principal": "Sergio Majluf",
+        "docente auxiliar": "Aarón Montoya",
+        "ayudante": "Andrés Martin", 
+        "nivel": "Integrado vertical"
+      },
+      "taller-01": {
+        "sigla": "DIS8623",
+        "nombre": "Taller editorial: libro ilustrado",
+        "docente principal": "Jennifer King",
+        "docente auxiliar": "Alvaro Arteaga",
+        "ayudante": "Denisse Navarrete",
+        "nivel": "Integrado vertical"
+      },
+      "taller-02": {
+        "sigla": "DIS8625",
+        "nombre": "Taller de exploración y cultura visual",
+        "docente principal": "Manuel Cordova",
+        "docente auxiliar": "Ariel Altamirano",
+        "ayudante": "undefined",
+        "nivel": "Integrado vertical"
+      },
+      "taller-03": {
+        "sigla": "DIS8621",
+        "nombre": "Taller local: exploración material",
+        "docente principal": "Rodrigo Bravo",
+        "docente auxiliar": "Diego Gajardo",
+        "ayudante": "undefined",
+        "nivel": "Integrado vertical"
+      },
+      "taller-04": {
+        "sigla": "DIS8627",
+        "nombre": "Taller de moda sostenible",
+        "docente principal": "Alejandra Ruiz",
+        "docente auxiliar": "Josefine Bachmann",
+        "ayudante": "Roberto Quintana",
+        "nivel": "Integrado vertical"
+      },
+      "taller-05": {
+        "sigla": "DIS8631",
+        "nombre": "Taller de superficies textiles",
+        "docente principal": "Maru Romero",
+        "docente auxiliar": "Maria Eugenia Ibarra",
+        "ayudante": "Trinidad Avila",
+        "nivel": "Integrado vertical"
+      },
+      "taller-06": {
+        "sigla": "DIS8642",
+        "nombre": "Taller procesos y fabricación",
+        "docente principal": "Vicente Stephens",
+        "docente auxiliar": "Margarita Talep",
+        "ayudante": "Sebastián Lioi",
+        "nivel": "Integrado vertical"
+      },
+      "taller-07": {
+        "sigla": "DIS8633",
+        "nombre": "Taller de diseño y paisaje",
+        "docente principal": "Simón Gallardo",
+        "docente auxiliar": "Juan Manuel Gili",
+        "ayudante": "Benjamín Muller",
+        "nivel": "Integrado vertical"
+      },
+      "taller-08": {
+        "sigla": "DIS8640",
+        "nombre": "Taller experimental de visualización de datos",
+        "docente principal": "Pedro Pedraza",
+        "docente auxiliar": "Sergio Mora",
+        "ayudante": "José Meza",
+        "nivel": "Integrado vertical"
+      },
+      "taller-09": {
+        "sigla": "DIS8641",
+        "nombre": "Taller exposiciones y procesos curatoriales",
+        "docente principal": "Pedro Silva",
+        "docente auxiliar": "undefined",
+        "ayudante": "undefined",
+        "nivel": "Integrado vertical"
+      },
+      "taller-10": {
+        "sigla": "undefined",
+        "nombre": "Taller internacional Europa",
+        "docente principal": "Barbara Pino",
+        "docente auxiliar": "undefined",
+        "ayudante": "undefined",
+        "nivel": "Integrado vertical"
+      },
+      "taller-11": {
+        "sigla": "undefined",
+        "nombre": "Taller de introducción al diseño",
+        "docente principal": "Bernardita Marambio",
+        "docente auxiliar": "Andro Yurac",
+        "ayudante": "undefined", 
+        "nivel": "Talleres de primer año"
+      },
+      "taller-12": {
+        "sigla": "undefined",
+        "nombre": "Taller de introducción al diseño",
+        "docente principal": "María Justiniano",
+        "docente auxiliar": "Catalina Cumsille",
+        "ayudante": "undefined", 
+        "nivel": "Talleres de primer año"
+      },
+      "taller-13": {
+        "sigla": "undefined",
+        "nombre": "Taller de introducción al diseño",
+        "docente principal": "Jorge Morales",
+        "docente auxiliar": "María de la Paz Faúndez",
+        "ayudante": "undefined", 
+        "nivel": "Talleres de primer año"
+      },
+      "taller-14": {
+        "sigla": "undefined",
+        "nombre": "Taller de introducción al diseño",
+        "docente principal": "Joaquín Bejares",
+        "docente auxiliar": "José Vivallo",
+        "ayudante": "undefined", 
+        "nivel": "Talleres de primer año"
+      },
+      "taller-15": {
+        "sigla": "undefined",
+        "nombre": "Taller de introducción al diseño",
+        "docente principal": "María Paz Morales",
+        "docente auxiliar": "Javiera Yáñez",
+        "ayudante": "undefined", 
+        "nivel": "Talleres de primer año"
+      },
+      "taller-16": {
+        "sigla": "undefined",
+        "nombre": "Taller de introducción al diseño",
+        "docente principal": "Juana Díaz",
+        "docente auxiliar": "Daniela Rivera",
+        "ayudante": "undefined", 
+        "nivel": "Talleres de primer año"
+      },
+      "taller-17": {
+        "sigla": "undefined",
+        "nombre": "Taller de diseño gráfico",
+        "docente principal": "Antonia Necochea",
+        "docente auxiliar": "Felipe Sanzana",
+        "ayudante": "undefined", 
+        "nivel": "Talleres de segundo año"
+      },
+      "taller-18": {
+        "sigla": "undefined",
+        "nombre": "Taller de diseño gráfico",
+        "docente principal": "Camilo Zúñiga",
+        "docente auxiliar": "Aribel Gonzáles",
+        "ayudante": "undefined", 
+        "nivel": "Talleres de segundo año"
+      },
+      "taller-19": {
+        "sigla": "undefined",
+        "nombre": "Taller de diseño gráfico",
+        "docente principal": "Nicolás Sagredo",
+        "docente auxiliar": "Daniela Ayala",
+        "ayudante": "undefined", 
+        "nivel": "Talleres de segundo año"
+      },
+      "taller-20": {
+        "sigla": "undefined",
+        "nombre": "Taller de diseño industrial",
+        "docente principal": "Carolina Kusanovich",
+        "docente auxiliar": "Felipe Cardemil",
+        "ayudante": "undefined", 
+        "nivel": "Talleres de segundo año"
+      },
+      "taller-21": {
+        "sigla": "undefined",
+        "nombre": "Taller de diseño industrial",
+        "docente principal": "Héctor Novoa",
+        "docente auxiliar": "Paula Corrales",
+        "ayudante": "Sebastián Mancero", 
+        "nivel": "Talleres de segundo año"
+      }
+    }
+}
