@@ -4,42 +4,23 @@ import 'inicio.dart' as inicio;
 import 'taller.dart' as taller;
 
 import 'dart:async';
-import 'dart:convert';
-// import 'dart:ffi';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-// import 'package:flutter/services.dart';
-// import 'package:flutter_svg/flutter_svg.dart';
-//import 'package:flutter/services.dart' show rootBundle;
 import 'package:http/http.dart' as http;
 import 'package:transparent_image/transparent_image.dart';
 import 'package:url_launcher/url_launcher.dart';
-
-// Future<String> loadAsset() async {
-//   // return rootBundle.loadString('assets/talleres.json');
-//   return rootBundle.loadString('assets/photos.json');
-// }
 
 Future<List<taller.Taller>> fetchTalleres(http.Client client) async {
   final response = await client.get(Uri.parse(archivos.talleresJSON));
   if (response.statusCode == 200) {
     // If the server did return a 200 OK response, then parse the JSON.
     //return Taller.fromJson(jsonDecode(response.body));
-    return compute(parseTalleres, response.body);
+    return compute(taller.parseTalleres, response.body);
   } else {
     // If the server did not return a 200 OK response, then throw an exception.
     throw Exception('No pudimos cargar talleres');
   }
-}
-
-// A function that converts a response body into a List<Taller>.
-List<taller.Taller> parseTalleres(String responseBody) {
-  final parsed =
-      (jsonDecode(responseBody) as List).cast<Map<String, dynamic>>();
-
-  return parsed
-      .map<taller.Taller>((json) => taller.Taller.fromJson(json))
-      .toList();
 }
 
 void main() {
@@ -58,7 +39,6 @@ class MyApp extends StatelessWidget {
       title: appTitle,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        // This is the theme of your application.
         colorScheme: ColorScheme.fromSeed(seedColor: estilo.colorPrincipal),
         useMaterial3: true,
       ),
@@ -84,25 +64,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    const colorSubheader = Color(0xFF005EB8);
-
-    // BoxDecoration decoracionInicio = BoxDecoration(
-    //     color: Colors.white,
-    //     border: Border.all(color: colorSubheader),
-    //     boxShadow: const [
-    //       BoxShadow(
-    //         color: estilo.sombra,
-    //         blurRadius: 3,
-    //         offset: Offset(4, 8), // Shadow position
-    //       ),
-    //     ]);
-
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-
     // https://api.flutter.dev/flutter/material/DefaultTabController-class.html
     return DefaultTabController(
-      // 0 para que parta al principio
       initialIndex: 0,
       // 0 es el inicio, 1 es el mapa, 2 son los talleres, 3 son los proyectos
       length: 4,
@@ -220,11 +183,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     left: 0,
                                     child: Text(
                                       'Primera planta',
-                                      style: TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w400,
-                                          fontFamily: 'Poppins',
-                                          color: colorSubheader),
+                                      style: estilo.estiloTextoPlanta,
                                     ),
                                   ),
 
@@ -240,11 +199,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     left: 0,
                                     child: Text(
                                       'Segunda planta',
-                                      style: TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w400,
-                                          fontFamily: 'Poppins',
-                                          color: colorSubheader),
+                                      style: estilo.estiloTextoPlanta,
                                     ),
                                   ),
 
@@ -260,11 +215,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     left: 0,
                                     child: Text(
                                       'Tercera planta',
-                                      style: TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w400,
-                                          fontFamily: 'Poppins',
-                                          color: colorSubheader),
+                                      style: estilo.estiloTextoPlanta,
                                     ),
                                   ),
                                 ],
@@ -282,10 +233,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   return const Center(
                     child: Text(
                       'cargando info...!',
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                          fontFamily: 'Poppins'),
+                      style: estilo.estiloTextoCargando,
                     ),
                   );
                 } else if (snapshot.hasData) {
@@ -313,10 +261,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   return const Center(
                     child: Text(
                       'cargando info...!',
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                          fontFamily: 'Poppins'),
+                      style: estilo.estiloTextoCargando,
                     ),
                   );
                 } else if (snapshot.hasData) {

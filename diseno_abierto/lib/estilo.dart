@@ -9,13 +9,22 @@ const colorFondo = Colors.white;
 const sombra = Colors.pink;
 
 const colorHeader = Color(0xFF005EB8);
-const colorSubheader = Color(0xFF005EB8);
+
+const colorTextoInicio = Color(0xFF005EB8);
+
+const colorTextoPlanta = Color(0xFF005EB8);
 
 const estiloTextoInicio = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w500,
     fontFamily: 'Poppins',
-    color: colorSubheader);
+    color: colorTextoInicio);
+
+const estiloTextoPlanta = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Poppins',
+    color: colorTextoPlanta);
 
 const estiloHeader = TextStyle(
     fontSize: 16,
@@ -23,9 +32,12 @@ const estiloHeader = TextStyle(
     fontFamily: 'Poppins',
     color: colorHeader);
 
+const estiloTextoCargando =
+    TextStyle(fontSize: 16, fontWeight: FontWeight.w500, fontFamily: 'Poppins');
+
 BoxDecoration decoracionInicio = BoxDecoration(
     color: Colors.white,
-    border: Border.all(color: colorSubheader),
+    border: Border.all(color: colorPrincipal),
     boxShadow: const [
       BoxShadow(
         color: sombra,

@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
 
 class Taller {
@@ -72,4 +73,12 @@ class TalleresList extends StatelessWidget {
       },
     );
   }
+}
+
+// A function that converts a response body into a List<Taller>.
+List<Taller> parseTalleres(String responseBody) {
+  final parsed =
+      (jsonDecode(responseBody) as List).cast<Map<String, dynamic>>();
+
+  return parsed.map<Taller>((json) => Taller.fromJson(json)).toList();
 }
