@@ -1,11 +1,12 @@
-import 'archivos.dart' as archivos;
+// import 'archivos.dart' as archivos;
 import 'estilo.dart' as estilo;
 import 'inicio.dart' as inicio;
+import 'plantas.dart' as plantas;
 import 'taller.dart' as taller;
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:transparent_image/transparent_image.dart';
+// import 'package:transparent_image/transparent_image.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void main() {
@@ -65,20 +66,20 @@ class _MyHomePageState extends State<MyHomePage> {
           bottom: const TabBar(tabs: <Widget>[
             Tab(
               icon: Icon(Icons.home_outlined, color: estilo.colorIcono),
-              text: 'Inicio',
+              text: 'inicio',
             ),
             Tab(
               icon: Icon(Icons.room_outlined, color: estilo.colorIcono),
-              text: 'Mapa',
+              text: 'mapa',
             ),
             Tab(
                 icon:
                     Icon(Icons.auto_awesome_outlined, color: estilo.colorIcono),
-                text: 'Talleres'),
+                text: 'talleres'),
             Tab(
                 icon: Icon(Icons.auto_awesome_motion_outlined,
                     color: estilo.colorIcono),
-                text: 'Proyectos'),
+                text: 'proyectos'),
           ]),
         ),
         body: TabBarView(
@@ -141,75 +142,76 @@ class _MyHomePageState extends State<MyHomePage> {
                 const Spacer(),
               ],
             ),
+            const plantas.MenuRadio(),
             // pos1
-            SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: Expanded(
-                child: Column(
-                  children: [
-                    Align(
-                        alignment: Alignment.topLeft,
-                        child: Positioned(
-                            left: 21,
-                            top: 190,
-                            child: Padding(
-                              padding: const EdgeInsets.all(31.21),
-                              child: Stack(
-                                children: [
-                                  FadeInImage.memoryNetwork(
-                                      fit: BoxFit.contain,
-                                      placeholder: kTransparentImage,
-                                      width: 540,
-                                      height: 540,
-                                      image: archivos.imagenPlanta1),
-                                  // primer texto
-                                  const Positioned(
-                                    top: 70,
-                                    left: 0,
-                                    child: Text(
-                                      'Primera planta',
-                                      style: estilo.estiloTextoPlanta,
-                                    ),
-                                  ),
+            // SingleChildScrollView(
+            //   scrollDirection: Axis.vertical,
+            //   child: Expanded(
+            //     child: Column(
+            //       children: [
+            //         Align(
+            //             alignment: Alignment.topLeft,
+            //             child: Positioned(
+            //                 left: 21,
+            //                 top: 190,
+            //                 child: Padding(
+            //                   padding: const EdgeInsets.all(31.21),
+            //                   child: Stack(
+            //                     children: [
+            //                       FadeInImage.memoryNetwork(
+            //                           fit: BoxFit.contain,
+            //                           placeholder: kTransparentImage,
+            //                           width: 540,
+            //                           height: 540,
+            //                           image: archivos.imagenPlanta1),
+            //                       // primer texto
+            //                       const Positioned(
+            //                         top: 70,
+            //                         left: 0,
+            //                         child: Text(
+            //                           'Primera planta',
+            //                           style: estilo.estiloTextoPlanta,
+            //                         ),
+            //                       ),
 
-                                  FadeInImage.memoryNetwork(
-                                      fit: BoxFit.contain,
-                                      placeholder: kTransparentImage,
-                                      width: 400,
-                                      height: 400,
-                                      image: archivos.imagenPlanta2),
-                                  // segundo texto
-                                  const Positioned(
-                                    top: 500,
-                                    left: 0,
-                                    child: Text(
-                                      'Segunda planta',
-                                      style: estilo.estiloTextoPlanta,
-                                    ),
-                                  ),
+            //                       FadeInImage.memoryNetwork(
+            //                           fit: BoxFit.contain,
+            //                           placeholder: kTransparentImage,
+            //                           width: 400,
+            //                           height: 400,
+            //                           image: archivos.imagenPlanta2),
+            //                       // segundo texto
+            //                       const Positioned(
+            //                         top: 500,
+            //                         left: 0,
+            //                         child: Text(
+            //                           'Segunda planta',
+            //                           style: estilo.estiloTextoPlanta,
+            //                         ),
+            //                       ),
 
-                                  FadeInImage.memoryNetwork(
-                                      fit: BoxFit.contain,
-                                      placeholder: kTransparentImage,
-                                      width: 400,
-                                      height: 400,
-                                      image: archivos.imagenPlanta3),
-                                  // tercer texto
-                                  const Positioned(
-                                    top: 780,
-                                    left: 0,
-                                    child: Text(
-                                      'Tercera planta',
-                                      style: estilo.estiloTextoPlanta,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            )))
-                  ],
-                ),
-              ),
-            ),
+            //                       FadeInImage.memoryNetwork(
+            //                           fit: BoxFit.contain,
+            //                           placeholder: kTransparentImage,
+            //                           width: 400,
+            //                           height: 400,
+            //                           image: archivos.imagenPlanta3),
+            //                       // tercer texto
+            //                       const Positioned(
+            //                         top: 780,
+            //                         left: 0,
+            //                         child: Text(
+            //                           'Tercera planta',
+            //                           style: estilo.estiloTextoPlanta,
+            //                         ),
+            //                       ),
+            //                     ],
+            //                   ),
+            //                 )))
+            //       ],
+            //     ),
+            //   ),
+            // ),
             // pos2
             FutureBuilder<List<taller.Taller>>(
               future: taller.fetchTalleres(http.Client()),
