@@ -1,3 +1,5 @@
+import 'archivos.dart' as archivos;
+import 'package:transparent_image/transparent_image.dart';
 import 'package:flutter/material.dart';
 
 /// Flutter code sample for [Radio].
@@ -58,3 +60,17 @@ class _EstadoMenuRadio extends State<MenuRadio> {
     );
   }
 }
+
+final selectorMapas = Column(
+  children: [
+    const Spacer(),
+    const MenuRadio(),
+    FadeInImage.memoryNetwork(
+        fit: BoxFit.contain,
+        placeholder: kTransparentImage,
+        width: 400,
+        height: 400,
+        image: archivos.imagenPlanta2),
+    const Spacer(),
+  ],
+);

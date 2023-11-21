@@ -7,7 +7,7 @@ import 'taller.dart' as taller;
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 // import 'package:transparent_image/transparent_image.dart';
-import 'package:url_launcher/url_launcher.dart';
+// import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(const MyApp());
@@ -85,65 +85,9 @@ class _MyHomePageState extends State<MyHomePage> {
         body: TabBarView(
           children: <Widget>[
             // pos0
-            Column(
-              children: [
-                const Spacer(),
-                Container(
-                  margin: const EdgeInsets.all(10.0),
-                  padding: const EdgeInsets.all(10.0),
-                  decoration: estilo.decoracionInicio,
-                  child: InkWell(
-                    onTap: () => launchUrl(Uri.parse(
-                        'https://www.instagram.com/explore/tags/disenoabiertoudp/')),
-                    child: const Text(
-                      inicio.definicionDisenoAbierto,
-                      style: estilo.estiloTextoInicio,
-                    ),
-                  ),
-                  // const Text(
-                  //   'diseño abierto es una muestra semestral de los resultados de taller por los estudiantes de la Escuela de Diseño UDP.',
-                  //   style: TextStyle(
-                  //       fontSize: 16,
-                  //       fontWeight: FontWeight.w500,
-                  //       fontFamily: 'Poppins',
-                  //       color: colorSubheader),
-                  // ),
-                ),
-                const Spacer(),
-                Container(
-                  margin: const EdgeInsets.all(10.0),
-                  padding: const EdgeInsets.all(10.0),
-                  decoration: estilo.decoracionInicio,
-                  child: const Text(
-                    inicio.definicionApp,
-                    style: estilo.estiloTextoInicio,
-                  ),
-                ),
-                const Spacer(),
-                Container(
-                  margin: const EdgeInsets.all(10.0),
-                  padding: const EdgeInsets.all(10.0),
-                  decoration: estilo.decoracionInicio,
-                  child: const Text(
-                    inicio.creditosApp,
-                    style: estilo.estiloTextoInicio,
-                  ),
-                ),
-                const Spacer(),
-                Container(
-                  margin: const EdgeInsets.all(10.0),
-                  padding: const EdgeInsets.all(10.0),
-                  decoration: estilo.decoracionInicio,
-                  child: const Text(
-                    inicio.materialesApp,
-                    style: estilo.estiloTextoInicio,
-                  ),
-                ),
-                const Spacer(),
-              ],
-            ),
-            const plantas.MenuRadio(),
+            inicio.cajitasBienvenida,
             // pos1
+            plantas.selectorMapas,
             // SingleChildScrollView(
             //   scrollDirection: Axis.vertical,
             //   child: Expanded(
@@ -165,15 +109,6 @@ class _MyHomePageState extends State<MyHomePage> {
             //                           height: 540,
             //                           image: archivos.imagenPlanta1),
             //                       // primer texto
-            //                       const Positioned(
-            //                         top: 70,
-            //                         left: 0,
-            //                         child: Text(
-            //                           'Primera planta',
-            //                           style: estilo.estiloTextoPlanta,
-            //                         ),
-            //                       ),
-
             //                       FadeInImage.memoryNetwork(
             //                           fit: BoxFit.contain,
             //                           placeholder: kTransparentImage,
@@ -181,14 +116,6 @@ class _MyHomePageState extends State<MyHomePage> {
             //                           height: 400,
             //                           image: archivos.imagenPlanta2),
             //                       // segundo texto
-            //                       const Positioned(
-            //                         top: 500,
-            //                         left: 0,
-            //                         child: Text(
-            //                           'Segunda planta',
-            //                           style: estilo.estiloTextoPlanta,
-            //                         ),
-            //                       ),
 
             //                       FadeInImage.memoryNetwork(
             //                           fit: BoxFit.contain,
@@ -196,15 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
             //                           width: 400,
             //                           height: 400,
             //                           image: archivos.imagenPlanta3),
-            //                       // tercer texto
-            //                       const Positioned(
-            //                         top: 780,
-            //                         left: 0,
-            //                         child: Text(
-            //                           'Tercera planta',
-            //                           style: estilo.estiloTextoPlanta,
-            //                         ),
-            //                       ),
+
             //                     ],
             //                   ),
             //                 )))
