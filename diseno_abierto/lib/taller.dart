@@ -1,4 +1,7 @@
+import 'package:http/http.dart' as http;
+import 'archivos.dart' as archivos;
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class Taller {
@@ -81,4 +84,16 @@ List<Taller> parseTalleres(String responseBody) {
       (jsonDecode(responseBody) as List).cast<Map<String, dynamic>>();
 
   return parsed.map<Taller>((json) => Taller.fromJson(json)).toList();
+}
+
+Future<List<Taller>> fetchTalleres(http.Client client) async {
+  final response = await client.get(Uri.parse(archivos.talleresJSON));
+  if (response.statusCode == 200) {
+    // If the server did return a 200 OK response, then parse the JSON.
+    //return Taller.fromJson(jsonDecode(response.body));
+    return compute(parseTalleres, response.body);
+  } else {
+    // If the server did not return a 200 OK response, then throw an exception.
+    throw Exception('No pudimos cargar talleres');
+  }
 }

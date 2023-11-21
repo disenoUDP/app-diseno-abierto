@@ -3,25 +3,10 @@ import 'estilo.dart' as estilo;
 import 'inicio.dart' as inicio;
 import 'taller.dart' as taller;
 
-import 'dart:async';
-
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:transparent_image/transparent_image.dart';
 import 'package:url_launcher/url_launcher.dart';
-
-Future<List<taller.Taller>> fetchTalleres(http.Client client) async {
-  final response = await client.get(Uri.parse(archivos.talleresJSON));
-  if (response.statusCode == 200) {
-    // If the server did return a 200 OK response, then parse the JSON.
-    //return Taller.fromJson(jsonDecode(response.body));
-    return compute(taller.parseTalleres, response.body);
-  } else {
-    // If the server did not return a 200 OK response, then throw an exception.
-    throw Exception('No pudimos cargar talleres');
-  }
-}
 
 void main() {
   runApp(const MyApp());
@@ -227,7 +212,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             // pos2
             FutureBuilder<List<taller.Taller>>(
-              future: fetchTalleres(http.Client()),
+              future: taller.fetchTalleres(http.Client()),
               builder: (context, snapshot) {
                 if (snapshot.hasError) {
                   return const Center(
@@ -255,7 +240,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             // pos3
             FutureBuilder<List<taller.Taller>>(
-              future: fetchTalleres(http.Client()),
+              future: taller.fetchTalleres(http.Client()),
               builder: (context, snapshot) {
                 if (snapshot.hasError) {
                   return const Center(
