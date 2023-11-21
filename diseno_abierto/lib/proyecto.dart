@@ -73,7 +73,7 @@ class ProyectosList extends StatelessWidget {
 }
 
 // A function that converts a response body into a List<Taller>.
-List<Proyecto> parseTalleres(String responseBody) {
+List<Proyecto> parseProyectos(String responseBody) {
   final parsed =
       (jsonDecode(responseBody) as List).cast<Map<String, dynamic>>();
 
@@ -81,11 +81,11 @@ List<Proyecto> parseTalleres(String responseBody) {
 }
 
 Future<List<Proyecto>> fetchProyectos(http.Client client) async {
-  final response = await client.get(Uri.parse(archivos.talleresJSON));
+  final response = await client.get(Uri.parse(archivos.proyectosJSON));
   if (response.statusCode == 200) {
     // If the server did return a 200 OK response, then parse the JSON.
     //return Taller.fromJson(jsonDecode(response.body));
-    return compute(parseTalleres, response.body);
+    return compute(parseProyectos, response.body);
   } else {
     // If the server did not return a 200 OK response, then throw an exception.
     throw Exception('No pudimos cargar talleres');
