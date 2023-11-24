@@ -18,7 +18,7 @@ final listaTalleres = FutureBuilder<List<taller.Taller>>(
       return Stack(
         children: [
           taller.TalleresList(talleres: snapshot.data!),
-          const Text("bla"),
+          const Text("agregar menu"),
         ],
         // TalleresList(talleres: snapshot.data!),
         // Text("bla"),
