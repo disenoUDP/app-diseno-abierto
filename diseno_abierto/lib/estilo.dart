@@ -6,13 +6,23 @@ const colorIcono = Color(0xFF005EB8);
 
 const colorFondo = Colors.white;
 
-const sombra = Colors.pink;
+const sombra = Color.fromARGB(255, 0, 69, 133);
+
+// const sombra = Colors.pink;
 
 const colorHeader = Color(0xFF005EB8);
 
 const colorTextoInicio = Color(0xFF005EB8);
 
 const colorTextoPlanta = Color(0xFF005EB8);
+
+const colorLink = Color.fromRGBO(0, 0, 0, 1);
+
+const estiloLink = TextStyle(
+  fontSize: 16,
+  fontWeight: FontWeight.bold,
+  fontFamily: 'Poppins',
+  color: colorLink);
 
 const estiloTextoInicio = TextStyle(
     fontSize: 16,

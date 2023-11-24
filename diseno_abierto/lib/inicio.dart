@@ -1,9 +1,18 @@
 import 'estilo.dart' as estilo;
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+// import 'package:url_launcher/url_launcher.dart';
 
-const definicionDisenoAbierto =
-    "diseño abierto es una muestra semestral de todos los proyectos de taller en diseño udp";
+// const definicionDisenoAbiertoParte1 =
+//     TextSpan (text: "diseño abierto es una muestra semestral de todos los proyectos de taller en ", style: TextStyle(fontWeight: FontWeight.w500));
+    
+
+// const definicionDisenoAbiertoParte2 =
+//     TextSpan(text: "diseño udp", style: TextStyle(fontWeight: FontWeight.bold));
+
+
+const definicionDisenoAbiertoParte1 = "diseño abierto es una muestra semestral de todos los proyectos de taller en ";
+
+const definicionDisenoAbiertoParte2 = "diseño udp";
 
 const definicionApp =
     "esta app fue creada para navegar la muestra y construir un registro histórico del evento";
@@ -21,13 +30,23 @@ final cajitasBienvenida = Column(
       margin: const EdgeInsets.all(10.0),
       padding: const EdgeInsets.all(10.0),
       decoration: estilo.decoracionInicio,
-      child: InkWell(
-        onTap: () => launchUrl(Uri.parse(
-            'https://www.instagram.com/explore/tags/disenoabiertoudp/')),
-        child: const Text(
-          definicionDisenoAbierto,
-          style: estilo.estiloTextoInicio,
-        ),
+      // child: InkWell(
+        // onTap: () => launchUrl(Uri.parse(
+        //     'https://www.instagram.com/explore/tags/disenoabiertoudp/')),
+            child:
+            RichText(
+              text: const TextSpan(
+                text: "diseño udp", style: TextStyle(fontWeight: FontWeight.bold),
+                 children: <TextSpan>[
+                  TextSpan(text: 'diseño abierto es una muestra semestral de todos los proyectos de taller en ', style: estilo.estiloTextoInicio),
+                  TextSpan(text: 'diseño udp', style: estilo.estiloLink),
+                 ],
+            ),),
+      // ),
+        // child:  Text(
+        //   definicionDisenoAbiertoParte1 + definicionDisenoAbiertoParte2,
+        //   style: estilo.estiloTextoInicio,
+        // ),
       ),
       // const Text(
       //   'diseño abierto es una muestra semestral de los resultados de taller por los estudiantes de la Escuela de Diseño UDP.',
@@ -37,7 +56,7 @@ final cajitasBienvenida = Column(
       //       fontFamily: 'Poppins',
       //       color: colorSubheader),
       // ),
-    ),
+
     const Spacer(),
     Container(
       margin: const EdgeInsets.all(10.0),
