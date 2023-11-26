@@ -1,3 +1,5 @@
+// import 'package:flutter/gestures.dart';
+
 import 'estilo.dart' as estilo;
 import 'package:flutter/material.dart';
 // import 'package:url_launcher/url_launcher.dart';
@@ -40,6 +42,8 @@ final cajitasBienvenida = Column(
                 text: "diseño udp", style: TextStyle(fontWeight: FontWeight.bold),
                  children: <TextSpan>[
                   TextSpan(text: 'diseño abierto es una muestra semestral de todos los proyectos de taller en ', style: estilo.estiloTextoInicio),
+
+                  // tutorial para linkear?? https://medium.com/codechai/how-to-create-hyperlink-for-text-in-flutter-ecf7d6019dfb
                   TextSpan(text: 'diseño udp', style: estilo.estiloLink),
                  ],
             ),),
