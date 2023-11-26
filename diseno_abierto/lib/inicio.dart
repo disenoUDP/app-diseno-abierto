@@ -1,3 +1,5 @@
+// import 'package:flutter/gestures.dart';
+
 import 'estilo.dart' as estilo;
 import 'package:flutter/material.dart';
 // import 'package:url_launcher/url_launcher.dart';
@@ -10,9 +12,8 @@ import 'package:flutter/material.dart';
 //     TextSpan(text: "diseño udp", style: TextStyle(fontWeight: FontWeight.bold));
 
 
-const definicionDisenoAbiertoParte1 = "diseño abierto es una muestra semestral de todos los proyectos de taller en ";
-
-const definicionDisenoAbiertoParte2 = "diseño udp";
+const definicionDisenoAbierto = 
+    "diseño abierto es una muestra semestral de todos los proyectos de taller en diseño udp";
 
 const definicionApp =
     "esta app fue creada para navegar la muestra y construir un registro histórico del evento";
@@ -25,6 +26,8 @@ const materialesApp =
 
 final cajitasBienvenida = Column(
   children: [
+
+    // definicion diseno abierto
     const Spacer(),
     Container(
       margin: const EdgeInsets.all(10.0),
@@ -39,24 +42,14 @@ final cajitasBienvenida = Column(
                 text: "diseño udp", style: TextStyle(fontWeight: FontWeight.bold),
                  children: <TextSpan>[
                   TextSpan(text: 'diseño abierto es una muestra semestral de todos los proyectos de taller en ', style: estilo.estiloTextoInicio),
+
+                  // tutorial para linkear?? https://medium.com/codechai/how-to-create-hyperlink-for-text-in-flutter-ecf7d6019dfb
                   TextSpan(text: 'diseño udp', style: estilo.estiloLink),
                  ],
             ),),
-      // ),
-        // child:  Text(
-        //   definicionDisenoAbiertoParte1 + definicionDisenoAbiertoParte2,
-        //   style: estilo.estiloTextoInicio,
-        // ),
       ),
-      // const Text(
-      //   'diseño abierto es una muestra semestral de los resultados de taller por los estudiantes de la Escuela de Diseño UDP.',
-      //   style: TextStyle(
-      //       fontSize: 16,
-      //       fontWeight: FontWeight.w500,
-      //       fontFamily: 'Poppins',
-      //       color: colorSubheader),
-      // ),
-
+      
+    // definicion app
     const Spacer(),
     Container(
       margin: const EdgeInsets.all(10.0),
@@ -67,26 +60,49 @@ final cajitasBienvenida = Column(
         style: estilo.estiloTextoInicio,
       ),
     ),
+
+    // creditos app
     const Spacer(),
     Container(
       margin: const EdgeInsets.all(10.0),
       padding: const EdgeInsets.all(10.0),
       decoration: estilo.decoracionInicio,
-      child: const Text(
-        creditosApp,
-        style: estilo.estiloTextoInicio,
-      ),
+      child: 
+      RichText(
+        text: const TextSpan(
+          text: "creditos app", style: TextStyle(fontWeight: FontWeight.bold),
+           children: <TextSpan>[
+            TextSpan(text: 'escrita por ', style: estilo.estiloTextoInicio),
+            TextSpan(text: '@janisepulveda ', style: estilo.estiloLink),
+            TextSpan(text: 'y ', style: estilo.estiloTextoInicio),
+            TextSpan(text: '@montoyamoraga ', style: estilo.estiloLink),
+            TextSpan(text: 'con fondos de vra udp', style: estilo.estiloTextoInicio),
+           ],
+        ),),
     ),
+    
+    // materiales app
     const Spacer(),
     Container(
       margin: const EdgeInsets.all(10.0),
       padding: const EdgeInsets.all(10.0),
       decoration: estilo.decoracionInicio,
-      child: const Text(
-        materialesApp,
-        style: estilo.estiloTextoInicio,
-      ),
+      child: RichText(
+        text: const TextSpan(
+          text: "materiales app", style: TextStyle(fontWeight: FontWeight.bold),
+           children: <TextSpan>[
+            TextSpan(text: 'v0.0.1 hecha con ', style: estilo.estiloTextoInicio),
+            TextSpan(text: 'flutter ', style: estilo.estiloLink),
+            TextSpan(text: 'y ', style: estilo.estiloTextoInicio),
+            TextSpan(text: 'material design 3 ', style: estilo.estiloLink),
+            TextSpan(text: 'en ', style: estilo.estiloTextoInicio),
+            TextSpan(text: 'santiago de chile ', style: estilo.estiloLink),
+            TextSpan(text: ', 2023', style: estilo.estiloTextoInicio),
+           ],
+        ),),
     ),
+
+    // ???
     const Spacer(),
   ],
 );
