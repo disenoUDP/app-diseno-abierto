@@ -38,13 +38,23 @@ final cajitasBienvenida = Column(
         //     'https://www.instagram.com/explore/tags/disenoabiertoudp/')),
             child:
             RichText(
+              textAlign: TextAlign.left,
               text: const TextSpan(
-                text: "diseño udp", style: TextStyle(fontWeight: FontWeight.bold),
+                // text: "diseño udp", style: TextStyle(fontWeight: FontWeight.bold),
                  children: <TextSpan>[
-                  TextSpan(text: 'diseño abierto es una muestra semestral de todos los proyectos de taller en ', style: estilo.estiloTextoInicio),
+                  TextSpan(
+                    text: 'diseño abierto es una muestra semestral de todos los proyectos de taller en ', 
+                    style: estilo.estiloTextoInicio
+                    ),
 
-                  // tutorial para linkear?? https://medium.com/codechai/how-to-create-hyperlink-for-text-in-flutter-ecf7d6019dfb
-                  TextSpan(text: 'diseño udp', style: estilo.estiloLink),
+                  // tutorial para linkear?? deprecated https://medium.com/codechai/how-to-create-hyperlink-for-text-in-flutter-ecf7d6019dfb
+                  TextSpan(
+                    text: 'diseño udp', 
+                    style: estilo.estiloLink,
+                    ),
+          //           recognizer: TapGestureRecognizer()
+          // ..onTap = () => launchUrlString('https://www.example.com'),
+          // https://www.flutterclutter.dev/flutter/tutorials/2023-04-22-creating-hyperlinks/
                  ],
             ),),
       ),
@@ -70,7 +80,7 @@ final cajitasBienvenida = Column(
       child: 
       RichText(
         text: const TextSpan(
-          text: "creditos app", style: TextStyle(fontWeight: FontWeight.bold),
+          // text: "creditos app", style: TextStyle(fontWeight: FontWeight.bold),
            children: <TextSpan>[
             TextSpan(text: 'escrita por ', style: estilo.estiloTextoInicio),
             TextSpan(text: '@janisepulveda ', style: estilo.estiloLink),
@@ -89,7 +99,7 @@ final cajitasBienvenida = Column(
       decoration: estilo.decoracionInicio,
       child: RichText(
         text: const TextSpan(
-          text: "materiales app", style: TextStyle(fontWeight: FontWeight.bold),
+          // text: "materiales app", style: TextStyle(fontWeight: FontWeight.bold),
            children: <TextSpan>[
             TextSpan(text: 'v0.0.1 hecha con ', style: estilo.estiloTextoInicio),
             TextSpan(text: 'flutter ', style: estilo.estiloLink),
