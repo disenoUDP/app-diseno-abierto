@@ -16,7 +16,7 @@ const colorTextoInicio = Color(0xFF005EB8);
 
 const colorTextoPlanta = Color(0xFF005EB8);
 
-const colorLink = Color.fromRGBO(0, 0, 0, 1);
+const colorLink = Color.fromRGBO(255, 130, 0, 1);
 
 const estiloLink = TextStyle(
   fontSize: 16,
