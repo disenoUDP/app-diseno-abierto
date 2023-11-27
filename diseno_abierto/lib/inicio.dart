@@ -12,14 +12,45 @@ const definicionDisenoAbiertoParte2 = "diseño udp";
 const definicionApp =
     "esta app fue creada para navegar la muestra y construir un registro histórico del evento";
 
-const creditosApp =
-    "escrita por @janisepulveda y @montoyamoraga con fondos de vra udp";
+const creditosAppParte1 =
+    "escrita por ";
 
-const materialesApp =
-    "v0.0.1. hecha con flutter y material design 3, en santiago de chile, 2023";
+const creditosAppParte2 =
+    "@janisepulveda ";
+
+const creditosAppParte3 =
+    "y ";
+
+const creditosAppParte4 =
+    "@montoyamoraga ";
+
+const creditosAppParte5 =
+    "con fondos de vra udp";
+
+const materialesAppParte1 =
+    "v0.0.1. hecha con ";
+
+const materialesAppParte2 =
+    "flutter ";
+
+const materialesAppParte3 =
+    "y ";
+
+const materialesAppParte4 =
+    "material design 3 ";
+
+const materialesAppParte5 =
+    ", en ";
+
+const materialesAppParte6 =
+    "santiago de chile ";
+
+const materialesAppParte7 =
+    ", 2023";
 
 final cajitasBienvenida = Column(
   children: [
+    
     // definicion diseno abierto
     const Spacer(),
     Container(
@@ -63,15 +94,29 @@ final cajitasBienvenida = Column(
       padding: const EdgeInsets.all(10.0),
       decoration: estilo.decoracionInicio,
       child: RichText(
-        text: const TextSpan(
-          // text: "creditos app", style: TextStyle(fontWeight: FontWeight.bold),
+        text: TextSpan(
           children: <TextSpan>[
-            TextSpan(text: 'escrita por ', style: estilo.estiloTextoInicio),
-            TextSpan(text: '@janisepulveda ', style: estilo.estiloLink),
-            TextSpan(text: 'y ', style: estilo.estiloTextoInicio),
-            TextSpan(text: '@montoyamoraga ', style: estilo.estiloLink),
+            const TextSpan(
+              text: creditosAppParte1, 
+              style: estilo.estiloTextoInicio),
             TextSpan(
-                text: 'con fondos de vra udp', style: estilo.estiloTextoInicio),
+              text: creditosAppParte2,
+              style: estilo.estiloLink,
+              recognizer: TapGestureRecognizer()
+                  ..onTap = () => launchUrl(
+                      Uri.parse('https://github.com/janisepulveda'))),
+            const TextSpan(
+              text: creditosAppParte3, 
+              style: estilo.estiloTextoInicio),
+            TextSpan(
+              text: creditosAppParte4, 
+              style: estilo.estiloLink,
+              recognizer: TapGestureRecognizer()
+                  ..onTap = () => launchUrl(
+                      Uri.parse('https://github.com/montoyamoraga'))),
+            const TextSpan(
+                text: creditosAppParte5, 
+                style: estilo.estiloTextoInicio),
           ],
         ),
       ),
@@ -84,23 +129,41 @@ final cajitasBienvenida = Column(
       padding: const EdgeInsets.all(10.0),
       decoration: estilo.decoracionInicio,
       child: RichText(
-        text: const TextSpan(
-          // text: "materiales app", style: TextStyle(fontWeight: FontWeight.bold),
+        text: TextSpan(
           children: <TextSpan>[
+            const TextSpan(
+                text: materialesAppParte1, 
+                style: estilo.estiloTextoInicio),
             TextSpan(
-                text: 'v0.0.1 hecha con ', style: estilo.estiloTextoInicio),
-            TextSpan(text: 'flutter ', style: estilo.estiloLink),
-            TextSpan(text: 'y ', style: estilo.estiloTextoInicio),
-            TextSpan(text: 'material design 3 ', style: estilo.estiloLink),
-            TextSpan(text: 'en ', style: estilo.estiloTextoInicio),
-            TextSpan(text: 'santiago de chile ', style: estilo.estiloLink),
-            TextSpan(text: ', 2023', style: estilo.estiloTextoInicio),
+              text: materialesAppParte2, 
+              style: estilo.estiloLink,
+              recognizer: TapGestureRecognizer()
+                  ..onTap = () => launchUrl(
+                      Uri.parse('https://flutter.dev'))),
+            const TextSpan(
+              text: materialesAppParte3, 
+              style: estilo.estiloTextoInicio),
+            TextSpan(
+              text: materialesAppParte4, 
+              style: estilo.estiloLink,
+              recognizer: TapGestureRecognizer()
+                  ..onTap = () => launchUrl(
+                      Uri.parse('https://m3.material.io'))),
+            const TextSpan(
+              text: materialesAppParte5, 
+              style: estilo.estiloTextoInicio),
+            TextSpan(
+              text: materialesAppParte6, 
+              style: estilo.estiloLink,
+              recognizer: TapGestureRecognizer()
+                  ..onTap = () => launchUrl(
+                      Uri.parse('https://es.wikipedia.org/wiki/Santiago_de_Chile'))),
+            const TextSpan(
+              text: materialesAppParte7, 
+              style: estilo.estiloTextoInicio),
           ],
         ),
       ),
     ),
-
-    // ???
-    const Spacer(),
   ],
 );
