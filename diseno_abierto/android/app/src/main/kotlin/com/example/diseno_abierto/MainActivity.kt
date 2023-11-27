@@ -1,4 +1,4 @@
-package com.example.diseno_abierto
+package cl.udp.disenoabierto
 
 import io.flutter.embedding.android.FlutterActivity
 
