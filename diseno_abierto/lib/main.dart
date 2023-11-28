@@ -7,9 +7,6 @@ import 'proyectos.dart' as proyectos;
 import 'talleres.dart' as talleres;
 
 import 'package:flutter/material.dart';
-// import 'package:http/http.dart' as http;
-// import 'package:transparent_image/transparent_image.dart';
-// import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(const MyApp());
