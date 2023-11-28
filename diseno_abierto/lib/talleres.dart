@@ -3,6 +3,31 @@ import 'taller.dart' as taller;
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
+enum ExerciseFilter {
+  primero,
+  segundo,
+  grafico,
+  industrial,
+  sistemaModa,
+  integradoVertical
+}
+
+var myMap = {
+  'primero': 'Primer año',
+  'segundo': 'Segundo año',
+  'grafico': 'Gráfico',
+  'industrial': 'Industrial',
+  'sistemaModa': 'Sistema moda',
+  'integradoVertical': 'Integrado vertical',
+};
+
+class FilterChipExample extends StatefulWidget {
+  const FilterChipExample({super.key});
+
+  @override
+  State<FilterChipExample> createState() => _FilterChipExampleState();
+}
+
 final listaTalleres = FutureBuilder<List<taller.Taller>>(
   future: taller.fetchTalleres(http.Client()),
   builder: (context, snapshot) {
@@ -17,11 +42,12 @@ final listaTalleres = FutureBuilder<List<taller.Taller>>(
       //return TalleresList(talleres: snapshot.data!);
       return Stack(
         children: [
+          const Spacer(),
           taller.TalleresList(talleres: snapshot.data!),
-          const Text("agregar menu"),
+          const Spacer(),
+          const FilterChipExample(),
+          const Spacer(),
         ],
-        // TalleresList(talleres: snapshot.data!),
-        // Text("bla"),
       );
     } else {
       return const Center(
@@ -30,3 +56,45 @@ final listaTalleres = FutureBuilder<List<taller.Taller>>(
     }
   },
 );
+
+class _FilterChipExampleState extends State<FilterChipExample> {
+  Set<ExerciseFilter> filters = <ExerciseFilter>{};
+
+  @override
+  Widget build(BuildContext context) {
+    final TextTheme textTheme = Theme.of(context).textTheme;
+
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          const SizedBox(height: 5.0),
+          Wrap(
+            spacing: 5.0,
+            children: ExerciseFilter.values.map((ExerciseFilter exercise) {
+              return FilterChip(
+                // label: Text(exercise.name),
+                label: Text(myMap[exercise.name.toString()]!),
+                selected: filters.contains(exercise),
+                onSelected: (bool selected) {
+                  setState(() {
+                    if (selected) {
+                      filters.add(exercise);
+                    } else {
+                      filters.remove(exercise);
+                    }
+                  });
+                },
+              );
+            }).toList(),
+          ),
+          const SizedBox(height: 10.0),
+          Text(
+            'Looking for: ${filters.map((ExerciseFilter e) => e.name).join(', ')}',
+            style: textTheme.labelLarge,
+          ),
+        ],
+      ),
+    );
+  }
+}

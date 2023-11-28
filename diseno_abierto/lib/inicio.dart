@@ -1,8 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'estilo.dart' as estilo;
-// import 'package:url_launcher/link.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'estilo.dart' as estilo;
 
 const definicionDisenoAbiertoParte1 =
     "diseño abierto es una muestra semestral de todos los proyectos de taller en ";

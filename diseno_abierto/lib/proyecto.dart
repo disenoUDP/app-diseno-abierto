@@ -3,6 +3,7 @@ import 'archivos.dart' as archivos;
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class Proyecto {
   final String sigla;
@@ -55,7 +56,10 @@ class ProyectosList extends StatelessWidget {
           child: Card(
               child: Column(
             children: [
-              Image.network(proyectos[index].thumbnailUrl),
+              FadeInImage.memoryNetwork(
+                  fit: BoxFit.contain,
+                  placeholder: kTransparentImage,
+                  image: proyectos[index].thumbnailUrl),
               Text(proyectos[index].sigla),
               Text(proyectos[index].nombre,
                   style: Theme.of(context).textTheme.labelSmall),

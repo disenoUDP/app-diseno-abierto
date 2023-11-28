@@ -1,6 +1,6 @@
-import 'archivos.dart' as archivos;
-import 'package:transparent_image/transparent_image.dart';
 import 'package:flutter/material.dart';
+import 'package:transparent_image/transparent_image.dart';
+import 'archivos.dart' as archivos;
 
 enum Llave { planta1, planta2, planta3 }
 
@@ -65,12 +65,45 @@ class _EstadoMenuRadio extends State<MenuRadio> {
             },
           ),
         ),
-        FadeInImage.memoryNetwork(
-            fit: BoxFit.contain,
-            placeholder: kTransparentImage,
-            width: 400,
-            height: 400,
-            image: pathMapa),
+        Center(
+          child: InteractiveViewer(
+            boundaryMargin: const EdgeInsets.all(20.0),
+            minScale: 0.1,
+            maxScale: 5.0,
+            child: FadeInImage.memoryNetwork(
+                fit: BoxFit.contain,
+                placeholder: kTransparentImage,
+                width: 400,
+                height: 400,
+                image: pathMapa),
+          ),
+        ),
+        //     return Center(
+//       child: InteractiveViewer(
+//         boundaryMargin: const EdgeInsets.all(20.0),
+//         minScale: 0.1,
+//         maxScale: 1.6,
+//         child: Container(
+//           decoration: const BoxDecoration(
+//             gradient: LinearGradient(
+//               begin: Alignment.topCenter,
+//               end: Alignment.bottomCenter,
+//               colors: <Color>[Colors.orange, Colors.red],
+//               stops: <double>[0.0, 1.0],
+//             ),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+        // FadeInImage.memoryNetwork(
+        //     fit: BoxFit.contain,
+        //     placeholder: kTransparentImage,
+        //     width: 400,
+        //     height: 400,
+        //     image: pathMapa),
       ],
     );
   }

@@ -3,6 +3,7 @@ import 'archivos.dart' as archivos;
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class Taller {
   final String sigla;
@@ -61,7 +62,10 @@ class TalleresList extends StatelessWidget {
           child: Card(
               child: Column(
             children: [
-              Image.network(talleres[index].thumbnailUrl),
+              FadeInImage.memoryNetwork(
+                  fit: BoxFit.contain,
+                  placeholder: kTransparentImage,
+                  image: talleres[index].thumbnailUrl),
               Text(talleres[index].sigla),
               Text(talleres[index].nombre,
                   style: Theme.of(context).textTheme.labelSmall),
