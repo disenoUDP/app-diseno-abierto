@@ -5,7 +5,6 @@ import 'package:http/http.dart' as http;
 
 enum ExerciseFilter {
   primero,
-  segundo,
   grafico,
   industrial,
   sistemaModa,
@@ -13,12 +12,11 @@ enum ExerciseFilter {
 }
 
 var myMap = {
-  'primero': 'Primer año',
-  'segundo': 'Segundo año',
-  'grafico': 'Gráfico',
-  'industrial': 'Industrial',
-  'sistemaModa': 'Sistema moda',
-  'integradoVertical': 'Integrado vertical',
+  'primero': 'primer año',
+  'grafico': 'gráfico',
+  'industrial': 'industrial',
+  'sistemaModa': 'sistema moda',
+  'integradoVertical': 'integrado vertical',
 };
 
 class FilterChipExample extends StatefulWidget {
@@ -40,13 +38,14 @@ final listaTalleres = FutureBuilder<List<taller.Taller>>(
       );
     } else if (snapshot.hasData) {
       //return TalleresList(talleres: snapshot.data!);
-      return Stack(
-        children: [
-          const Spacer(),
+      return Column(
+        children: <Widget>[
           taller.TalleresList(talleres: snapshot.data!),
-          const Spacer(),
-          const FilterChipExample(),
-          const Spacer(),
+          // const Spacer(),
+          // const FilterChipExample(),
+          // taller.TalleresList(talleres: snapshot.data!),
+
+          // const Spacer(),
         ],
       );
     } else {
@@ -62,8 +61,6 @@ class _FilterChipExampleState extends State<FilterChipExample> {
 
   @override
   Widget build(BuildContext context) {
-    final TextTheme textTheme = Theme.of(context).textTheme;
-
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -87,11 +84,6 @@ class _FilterChipExampleState extends State<FilterChipExample> {
                 },
               );
             }).toList(),
-          ),
-          const SizedBox(height: 10.0),
-          Text(
-            'Looking for: ${filters.map((ExerciseFilter e) => e.name).join(', ')}',
-            style: textTheme.labelLarge,
           ),
         ],
       ),
