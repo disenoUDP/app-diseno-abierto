@@ -2,7 +2,7 @@
 import 'barra_arriba.dart' as barra_arriba;
 import 'estilo.dart' as estilo;
 import 'inicio.dart' as inicio;
-import 'plantas.dart' as plantas;
+import 'mapa.dart' as plantas;
 import 'proyectos.dart' as proyectos;
 import 'talleres.dart' as talleres;
 
