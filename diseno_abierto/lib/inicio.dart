@@ -40,8 +40,9 @@ final cajitasBienvenida = Column(
     // definicion diseno abierto
     const Spacer(),
     Container(
-      margin: const EdgeInsets.all(10.0),
-      padding: const EdgeInsets.all(10.0),
+      margin: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(15.0),
+      height: 110,
       decoration: estilo.decoracionInicio,
       child: RichText(
         textAlign: TextAlign.left,
@@ -64,8 +65,9 @@ final cajitasBienvenida = Column(
     // definicion app
     const Spacer(),
     Container(
-      margin: const EdgeInsets.all(10.0),
-      padding: const EdgeInsets.all(10.0),
+      margin: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(15.0),
+      height: 110,
       decoration: estilo.decoracionInicio,
       child: const Text(
         definicionApp,
@@ -76,8 +78,9 @@ final cajitasBienvenida = Column(
     // creditos app
     const Spacer(),
     Container(
-      margin: const EdgeInsets.all(10.0),
-      padding: const EdgeInsets.all(10.0),
+      margin: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(15.0),
+      height: 110,
       decoration: estilo.decoracionInicio,
       child: RichText(
         text: TextSpan(
@@ -108,8 +111,9 @@ final cajitasBienvenida = Column(
     // materiales app
     const Spacer(),
     Container(
-      margin: const EdgeInsets.all(10.0),
-      padding: const EdgeInsets.all(10.0),
+      margin: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(15.0),
+      height: 110,
       decoration: estilo.decoracionInicio,
       child: RichText(
         text: TextSpan(
