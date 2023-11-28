@@ -27,7 +27,7 @@ const materialesAppParte2 = "flutter ";
 
 const materialesAppParte3 = "y ";
 
-const materialesAppParte4 = "material design 3 ";
+const materialesAppParte4 = "material design 3";
 
 const materialesAppParte5 = ", en ";
 
