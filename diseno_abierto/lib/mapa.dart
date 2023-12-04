@@ -67,7 +67,9 @@ class _EstadoMenuRadio extends State<MenuRadio> {
         ),
         Center(
           child: InteractiveViewer(
-            boundaryMargin: const EdgeInsets.all(50.0),
+            panEnabled: true,
+            scaleEnabled: true,
+            boundaryMargin: const EdgeInsets.all(10.0),
             minScale: 0.1,
             maxScale: 5.0,
             child: FadeInImage.memoryNetwork(
