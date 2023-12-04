@@ -11,7 +11,7 @@ const definicionDisenoAbiertoParte2 = "diseño udp";
 const definicionApp =
     "esta app fue creada para navegar la muestra y construir un registro histórico del evento";
 
-const creditosAppParte1 = "escrita por ";
+const creditosAppParte1 = "desarrollada por ";
 
 const creditosAppParte2 = "@janisepulveda ";
 
@@ -21,7 +21,7 @@ const creditosAppParte4 = "@montoyamoraga ";
 
 const creditosAppParte5 = "con fondos de vra udp";
 
-const materialesAppParte1 = "v0.0.1. hecha con ";
+const materialesAppParte1 = "construida con ";
 
 const materialesAppParte2 = "flutter ";
 
