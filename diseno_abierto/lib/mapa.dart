@@ -21,6 +21,7 @@ class _EstadoMenuRadio extends State<MenuRadio> {
     return Column(
       children: <Widget>[
         ListTile(
+          contentPadding: const EdgeInsets.all(0),
           title: const Text('primera planta'),
           leading: Radio<Llave>(
             value: Llave.planta1,
