@@ -3,15 +3,9 @@ import 'proyecto.dart' as proyecto;
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-enum ExerciseFilter {
-  primero,
-  grafico,
-  industrial,
-  sistemaModa,
-  integradoVertical
-}
+enum Filtro { primero, grafico, industrial, sistemaModa, integradoVertical }
 
-var myMap = {
+var mapeo = {
   'primero': 'primer año',
   'grafico': 'gráfico',
   'industrial': 'industrial',
@@ -20,7 +14,7 @@ var myMap = {
 };
 
 class _FilterChipExampleState extends State<FilterChipExample> {
-  Set<ExerciseFilter> filters = <ExerciseFilter>{};
+  Set<Filtro> filters = <Filtro>{};
 
   @override
   Widget build(BuildContext context) {
@@ -28,13 +22,13 @@ class _FilterChipExampleState extends State<FilterChipExample> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          const SizedBox(height: 5.0),
+          const Spacer(),
+          // const SizedBox(height: 5.0),
           Wrap(
             spacing: 5.0,
-            children: ExerciseFilter.values.map((ExerciseFilter exercise) {
+            children: Filtro.values.map((Filtro exercise) {
               return FilterChip(
-                // label: Text(exercise.name),
-                label: Text(myMap[exercise.name.toString()]!),
+                label: Text(mapeo[exercise.name.toString()]!),
                 selected: filters.contains(exercise),
                 onSelected: (bool selected) {
                   setState(() {
@@ -48,6 +42,7 @@ class _FilterChipExampleState extends State<FilterChipExample> {
               );
             }).toList(),
           ),
+          const Spacer(),
         ],
       ),
     );
