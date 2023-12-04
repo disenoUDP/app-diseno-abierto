@@ -21,7 +21,6 @@ class _EstadoMenuRadio extends State<MenuRadio> {
     return Column(
       children: <Widget>[
         ListTile(
-          contentPadding: const EdgeInsets.all(0),
           title: const Text('primera planta'),
           leading: Radio<Llave>(
             value: Llave.planta1,
@@ -68,43 +67,17 @@ class _EstadoMenuRadio extends State<MenuRadio> {
         ),
         Center(
           child: InteractiveViewer(
-            boundaryMargin: const EdgeInsets.all(20.0),
+            boundaryMargin: const EdgeInsets.all(50.0),
             minScale: 0.1,
             maxScale: 5.0,
             child: FadeInImage.memoryNetwork(
                 fit: BoxFit.contain,
                 placeholder: kTransparentImage,
-                width: 400,
-                height: 400,
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height * 0.5,
                 image: pathMapa),
           ),
         ),
-        //     return Center(
-//       child: InteractiveViewer(
-//         boundaryMargin: const EdgeInsets.all(20.0),
-//         minScale: 0.1,
-//         maxScale: 1.6,
-//         child: Container(
-//           decoration: const BoxDecoration(
-//             gradient: LinearGradient(
-//               begin: Alignment.topCenter,
-//               end: Alignment.bottomCenter,
-//               colors: <Color>[Colors.orange, Colors.red],
-//               stops: <double>[0.0, 1.0],
-//             ),
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
-
-        // FadeInImage.memoryNetwork(
-        //     fit: BoxFit.contain,
-        //     placeholder: kTransparentImage,
-        //     width: 400,
-        //     height: 400,
-        //     image: pathMapa),
       ],
     );
   }
