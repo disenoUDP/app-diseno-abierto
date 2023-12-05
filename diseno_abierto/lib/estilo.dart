@@ -48,6 +48,12 @@ const estiloHeader = TextStyle(
     fontFamily: 'Poppins',
     color: colorHeader);
 
+const estiloTaller = TextStyle(
+    fontSize: 10,
+    fontWeight: FontWeight.w600,
+    fontFamily: 'Poppins',
+    color: colorHeader);
+
 const estiloTextoCargando =
     TextStyle(fontSize: 16, fontWeight: FontWeight.w500, fontFamily: 'Poppins');
 

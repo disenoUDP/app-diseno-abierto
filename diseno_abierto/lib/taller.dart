@@ -1,9 +1,10 @@
+import 'package:diseno_abierto/estilo.dart';
 import 'package:http/http.dart' as http;
 import 'archivos.dart' as archivos;
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:transparent_image/transparent_image.dart';
+// import 'package:transparent_image/transparent_image.dart';
 
 class Taller {
   final String sigla;
@@ -58,25 +59,26 @@ class TalleresList extends StatelessWidget {
         // referencia
         // https://gallery.flutter.dev/#/demo/card
 
-        return InkWell(
-          child: Card(
-              child: Column(
+        return Center(
+            child: Card(
+                child: SizedBox(
+          child:
+              // FadeInImage.memoryNetwork(
+              //     fit: BoxFit.contain,
+              //     placeholder: kTransparentImage,
+              //     image: talleres[index].thumbnailUrl),
+              Center(
+                  child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              FadeInImage.memoryNetwork(
-                  fit: BoxFit.contain,
-                  placeholder: kTransparentImage,
-                  image: talleres[index].thumbnailUrl),
-              Text(talleres[index].sigla),
-              Text(talleres[index].nombre,
-                  style: Theme.of(context).textTheme.labelSmall),
+              Text(talleres[index].sigla, style: estiloTaller),
+              Text(talleres[index].nombre, style: estiloTaller),
+              Text(talleres[index].docentePrincipal, style: estiloTaller),
+              Text(talleres[index].docenteAuxiliar, style: estiloTaller),
             ],
           )),
-        );
-
-        // return Card(
-        //     child: Image.network(
-        //   talleres[index].thumbnailUrl,
-        // ));
+        )));
       },
     );
   }
