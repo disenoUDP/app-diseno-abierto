@@ -25,13 +25,13 @@ const colorTextoPlanta = Color(0xFF1234FF);
 const colorLink = Color.fromRGBO(255, 130, 0, 1);
 
 const estiloLink = TextStyle(
-  fontSize: 16,
-  fontWeight: FontWeight.bold,
-  fontFamily: 'Poppins',
-  color: colorLink);
+    fontSize: 12,
+    fontWeight: FontWeight.bold,
+    fontFamily: 'Poppins',
+    color: colorLink);
 
 const estiloTextoInicio = TextStyle(
-    fontSize: 16,
+    fontSize: 12,
     fontWeight: FontWeight.w500,
     fontFamily: 'Poppins',
     color: colorTextoInicio);

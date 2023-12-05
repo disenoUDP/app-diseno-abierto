@@ -42,7 +42,7 @@ final cajitasBienvenida = Column(
     Container(
       margin: const EdgeInsets.all(20.0),
       padding: const EdgeInsets.all(15.0),
-      height: 110,
+      height: 80,
       decoration: estilo.decoracionInicio,
       child: RichText(
         textAlign: TextAlign.left,
@@ -67,7 +67,7 @@ final cajitasBienvenida = Column(
     Container(
       margin: const EdgeInsets.all(20.0),
       padding: const EdgeInsets.all(15.0),
-      height: 110,
+      height: 80,
       decoration: estilo.decoracionInicio,
       child: const Text(
         definicionApp,
@@ -80,7 +80,7 @@ final cajitasBienvenida = Column(
     Container(
       margin: const EdgeInsets.all(20.0),
       padding: const EdgeInsets.all(15.0),
-      height: 110,
+      height: 80,
       decoration: estilo.decoracionInicio,
       child: RichText(
         text: TextSpan(
@@ -113,7 +113,7 @@ final cajitasBienvenida = Column(
     Container(
       margin: const EdgeInsets.all(20.0),
       padding: const EdgeInsets.all(15.0),
-      height: 110,
+      height: 80,
       decoration: estilo.decoracionInicio,
       child: RichText(
         text: TextSpan(
