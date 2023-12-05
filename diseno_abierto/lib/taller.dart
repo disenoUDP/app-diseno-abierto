@@ -61,24 +61,28 @@ class TalleresList extends StatelessWidget {
 
         return Center(
             child: Card(
-                child: SizedBox(
-          child:
-              // FadeInImage.memoryNetwork(
-              //     fit: BoxFit.contain,
-              //     placeholder: kTransparentImage,
-              //     image: talleres[index].thumbnailUrl),
-              Center(
-                  child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(talleres[index].sigla, style: estiloTaller),
-              Text(talleres[index].nombre, style: estiloTaller),
-              Text(talleres[index].docentePrincipal, style: estiloTaller),
-              Text(talleres[index].docenteAuxiliar, style: estiloTaller),
-            ],
-          )),
-        )));
+                child: InkWell(
+                    onTap: () {},
+                    child: SizedBox(
+                      child:
+                          // FadeInImage.memoryNetwork(
+                          //     fit: BoxFit.contain,
+                          //     placeholder: kTransparentImage,
+                          //     image: talleres[index].thumbnailUrl),
+                          Center(
+                              child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(talleres[index].sigla, style: estiloTaller),
+                          Text(talleres[index].nombre, style: estiloTaller),
+                          Text(talleres[index].docentePrincipal,
+                              style: estiloTaller),
+                          Text(talleres[index].docenteAuxiliar,
+                              style: estiloTaller),
+                        ],
+                      )),
+                    ))));
       },
     );
   }
