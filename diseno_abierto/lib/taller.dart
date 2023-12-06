@@ -64,6 +64,7 @@ class TalleresList extends StatelessWidget {
                 child: InkWell(
                     onTap: () {},
                     child: SizedBox(
+                      width: 160,
                       child:
                           // FadeInImage.memoryNetwork(
                           //     fit: BoxFit.contain,
@@ -74,12 +75,39 @@ class TalleresList extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Text(talleres[index].sigla, style: estiloTaller),
-                          Text(talleres[index].nombre, style: estiloTaller),
-                          Text(talleres[index].docentePrincipal,
-                              style: estiloTaller),
-                          Text(talleres[index].docenteAuxiliar,
-                              style: estiloTaller),
+                          const Spacer(),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 20, vertical: 0),
+                            child: Text(
+                              talleres[index].sigla,
+                              softWrap: true,
+                              style: estiloTallerSigla,
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                          const Spacer(),
+                          Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 20, vertical: 0),
+                              child: Text(talleres[index].nombre,
+                                  style: estiloTallerNombre,
+                                  textAlign: TextAlign.center)),
+                          const Spacer(),
+                          Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 20, vertical: 0),
+                              child: Text(talleres[index].docentePrincipal,
+                                  style: estiloTallerDocente,
+                                  textAlign: TextAlign.center)),
+                          const Spacer(),
+                          Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 20, vertical: 0),
+                              child: Text(talleres[index].docenteAuxiliar,
+                                  style: estiloTallerDocente,
+                                  textAlign: TextAlign.center)),
+                          const Spacer(),
                         ],
                       )),
                     ))));

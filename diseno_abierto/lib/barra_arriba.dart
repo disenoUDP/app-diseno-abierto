@@ -11,18 +11,19 @@ final barra = AppBar(
   bottom: const TabBar(tabs: <Widget>[
     Tab(
       icon: Icon(Icons.home_outlined, color: estilo.colorIcono),
-      text: 'inicio',
+      text: 'Inicio',
     ),
     Tab(
       icon: Icon(Icons.room_outlined, color: estilo.colorIcono),
-      text: 'mapa',
+      text: 'Mapa',
     ),
     Tab(
-        icon: Icon(Icons.auto_awesome_outlined, color: estilo.colorIcono),
-        text: 'talleres'),
+      icon: Icon(Icons.auto_awesome_outlined, color: estilo.colorIcono),
+      text: 'Talleres',
+    ),
     Tab(
-        icon:
-            Icon(Icons.auto_awesome_motion_outlined, color: estilo.colorIcono),
-        text: 'proyectos'),
+      icon: Icon(Icons.auto_awesome_motion_outlined, color: estilo.colorIcono),
+      text: 'Proyectos',
+    ),
   ]),
 );

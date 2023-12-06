@@ -21,7 +21,7 @@ class _EstadoMenuRadio extends State<MenuRadio> {
     return Column(
       children: <Widget>[
         ListTile(
-          title: const Text('primera planta'),
+          title: const Text('Primera planta'),
           leading: Radio<Llave>(
             value: Llave.planta1,
             groupValue: _character,
@@ -36,7 +36,7 @@ class _EstadoMenuRadio extends State<MenuRadio> {
           ),
         ),
         ListTile(
-          title: const Text('segunda planta'),
+          title: const Text('Segunda planta'),
           leading: Radio<Llave>(
             value: Llave.planta2,
             groupValue: _character,
@@ -51,7 +51,7 @@ class _EstadoMenuRadio extends State<MenuRadio> {
           ),
         ),
         ListTile(
-          title: const Text('tercera planta'),
+          title: const Text('Tercera planta'),
           leading: Radio<Llave>(
             value: Llave.planta3,
             groupValue: _character,

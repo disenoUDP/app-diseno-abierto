@@ -22,7 +22,7 @@ const colorTextoInicio = Color(0xFF1234FF);
 
 const colorTextoPlanta = Color(0xFF1234FF);
 
-const colorLink = Color.fromRGBO(255, 130, 0, 1);
+const colorLink = Color(0xFF1234FF);
 
 const estiloLink = TextStyle(
     fontSize: 12,
@@ -32,7 +32,7 @@ const estiloLink = TextStyle(
 
 const estiloTextoInicio = TextStyle(
     fontSize: 12,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.normal,
     fontFamily: 'Poppins',
     color: colorTextoInicio);
 
@@ -54,9 +54,21 @@ const estiloHeader = TextStyle(
     fontFamily: 'Poppins',
     color: colorHeader);
 
-const estiloTaller = TextStyle(
-    fontSize: 10,
-    fontWeight: FontWeight.w600,
+const estiloTallerSigla = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Poppins',
+    color: colorHeader);
+
+const estiloTallerNombre = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Poppins',
+    color: colorHeader);
+
+const estiloTallerDocente = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
     fontFamily: 'Poppins',
     color: colorHeader);
 

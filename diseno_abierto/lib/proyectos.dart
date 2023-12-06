@@ -6,11 +6,11 @@ import 'package:http/http.dart' as http;
 enum Filtro { primero, grafico, industrial, sistemaModa, integradoVertical }
 
 var mapeo = {
-  'primero': 'primer año',
-  'grafico': 'gráfico',
-  'industrial': 'industrial',
-  'sistemaModa': 'sistema moda',
-  'integradoVertical': 'integrado vertical',
+  'primero': 'Primer año',
+  'grafico': 'Gráfico',
+  'industrial': 'Industrial',
+  'sistemaModa': 'Sistema moda',
+  'integradoVertical': 'Integrado vertical',
 };
 
 class _MenuFilterChipState extends State<MenuFilterChip> {
@@ -70,7 +70,7 @@ final listaProyectos = FutureBuilder<List<proyecto.Proyecto>>(
             children: [
               MenuFilterChip(),
               Text(
-                'próximamente',
+                'Próximamente',
                 maxLines: 2,
                 style: estilo.estiloHeader,
                 textAlign: TextAlign.center,

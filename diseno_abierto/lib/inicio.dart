@@ -4,14 +4,14 @@ import 'package:url_launcher/url_launcher.dart';
 import 'estilo.dart' as estilo;
 
 const definicionDisenoAbiertoParte1 =
-    "diseño abierto es una muestra semestral de todos los proyectos de taller en ";
+    "Diseño abierto es una muestra semestral de todos los proyectos de taller en ";
 
-const definicionDisenoAbiertoParte2 = "diseño udp";
+const definicionDisenoAbiertoParte2 = "Diseño UDP";
 
 const definicionApp =
-    "esta app fue creada para navegar la muestra y construir un registro histórico del evento";
+    "Esta app fue creada para navegar la muestra y construir un registro histórico del evento";
 
-const creditosAppParte1 = "desarrollada por ";
+const creditosAppParte1 = "Desarrollada por ";
 
 const creditosAppParte2 = "@janisepulveda ";
 
@@ -19,21 +19,21 @@ const creditosAppParte3 = "y ";
 
 const creditosAppParte4 = "@montoyamoraga ";
 
-const creditosAppParte5 = "con fondos de vra udp";
+const creditosAppParte5 = "con fondos de VRA UDP";
 
 const materialesAppParte1 = "construida con ";
 
-const materialesAppParte2 = "flutter ";
+const materialesAppParte2 = "Flutter ";
 
 const materialesAppParte3 = "y ";
 
-const materialesAppParte4 = "material design 3";
+const materialesAppParte4 = "Material Design 3";
 
-const materialesAppParte5 = ", en ";
+const materialesAppParte5 = " en ";
 
-const materialesAppParte6 = "santiago de chile ";
+const materialesAppParte6 = "Santiago de Chile";
 
-const materialesAppParte7 = ", 2023";
+const materialesAppParte7 = " en el 2023";
 
 final cajitasBienvenida = Column(
   children: [
