@@ -13,47 +13,42 @@ var mapeo = {
   'integradoVertical': 'integrado vertical',
 };
 
-class _FilterChipExampleState extends State<FilterChipExample> {
+class _MenuFilterChipState extends State<MenuFilterChip> {
   Set<Filtro> filters = <Filtro>{};
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          const Spacer(),
-          // const SizedBox(height: 5.0),
-          Wrap(
-            spacing: 5.0,
-            children: Filtro.values.map((Filtro exercise) {
-              return FilterChip(
-                label: Text(mapeo[exercise.name.toString()]!),
-                selected: filters.contains(exercise),
-                onSelected: (bool selected) {
-                  setState(() {
-                    if (selected) {
-                      filters.add(exercise);
-                    } else {
-                      filters.remove(exercise);
-                    }
-                  });
-                },
-              );
-            }).toList(),
-          ),
-          const Spacer(),
-        ],
-      ),
-    );
+    return Align(
+        alignment: Alignment.center,
+        child: Wrap(
+          alignment: WrapAlignment.center,
+          crossAxisAlignment: WrapCrossAlignment.center,
+          spacing: 5.0,
+          children: Filtro.values.map((Filtro valor) {
+            return FilterChip(
+              label: Text(mapeo[valor.name.toString()]!,
+                  style: estilo.estiloTextoMenuChip),
+              selected: filters.contains(valor),
+              onSelected: (bool selected) {
+                setState(() {
+                  if (selected) {
+                    filters.add(valor);
+                  } else {
+                    filters.remove(valor);
+                  }
+                });
+              },
+            );
+          }).toList(),
+        ));
   }
 }
 
-class FilterChipExample extends StatefulWidget {
-  const FilterChipExample({super.key});
+class MenuFilterChip extends StatefulWidget {
+  const MenuFilterChip({super.key});
 
   @override
-  State<FilterChipExample> createState() => _FilterChipExampleState();
+  State<MenuFilterChip> createState() => _MenuFilterChipState();
 }
 
 final listaProyectos = FutureBuilder<List<proyecto.Proyecto>>(
@@ -67,7 +62,24 @@ final listaProyectos = FutureBuilder<List<proyecto.Proyecto>>(
         ),
       );
     } else if (snapshot.hasData) {
-      return proyecto.ProyectosList(proyectos: snapshot.data!);
+      return const Align(
+          alignment: Alignment.topCenter,
+          child: Wrap(
+            direction: Axis.horizontal,
+            alignment: WrapAlignment.center,
+            children: [
+              MenuFilterChip(),
+              Text(
+                'próximamente',
+                maxLines: 2,
+                style: estilo.estiloHeader,
+                textAlign: TextAlign.center,
+              ),
+              // proyecto.ProyectosList(proyectos: snapshot.data!)
+            ],
+          ));
+
+      // return proyecto.ProyectosList(proyectos: snapshot.data!);
     } else {
       return const Center(
         child: CircularProgressIndicator(),

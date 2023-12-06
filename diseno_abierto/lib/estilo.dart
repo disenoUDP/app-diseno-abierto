@@ -36,6 +36,12 @@ const estiloTextoInicio = TextStyle(
     fontFamily: 'Poppins',
     color: colorTextoInicio);
 
+const estiloTextoMenuChip = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Poppins',
+    color: colorTextoInicio);
+
 const estiloTextoPlanta = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w400,
