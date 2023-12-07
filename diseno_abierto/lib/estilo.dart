@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 // const colorPrincipal = Color.fromRGBO(0, 94, 184, 1);
 
-const colorPrincipal = Color(0xFF1234FF);
+const colorPrincipal = Color(0xFF0000FF);
 
 // const colorIcono = Color(0xFF005EB8);
 
@@ -22,7 +22,13 @@ const colorTextoInicio = Color(0xFF1234FF);
 
 const colorTextoPlanta = Color(0xFF1234FF);
 
-const colorLink = Color(0xFF1234FF);
+const colorLink = Color(0xFF0000FF);
+
+const estiloMapaOpcion = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.normal,
+    fontFamily: 'Poppins',
+    color: colorLink);
 
 const estiloLink = TextStyle(
     fontSize: 12,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'estilo.dart' as estilo;
 import 'package:transparent_image/transparent_image.dart';
 import 'archivos.dart' as archivos;
 
@@ -21,7 +22,7 @@ class _EstadoMenuRadio extends State<MenuRadio> {
     return Column(
       children: <Widget>[
         ListTile(
-          title: const Text('Primera planta'),
+          title: const Text('Primera planta', style: estilo.estiloMapaOpcion),
           leading: Radio<Llave>(
             value: Llave.planta1,
             groupValue: _character,
@@ -36,7 +37,7 @@ class _EstadoMenuRadio extends State<MenuRadio> {
           ),
         ),
         ListTile(
-          title: const Text('Segunda planta'),
+          title: const Text('Segunda planta', style: estilo.estiloMapaOpcion),
           leading: Radio<Llave>(
             value: Llave.planta2,
             groupValue: _character,
@@ -51,7 +52,7 @@ class _EstadoMenuRadio extends State<MenuRadio> {
           ),
         ),
         ListTile(
-          title: const Text('Tercera planta'),
+          title: const Text('Tercera planta', style: estilo.estiloMapaOpcion),
           leading: Radio<Llave>(
             value: Llave.planta3,
             groupValue: _character,
