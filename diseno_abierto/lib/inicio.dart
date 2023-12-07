@@ -21,7 +21,7 @@ const creditosAppParte4 = "@montoyamoraga ";
 
 const creditosAppParte5 = "con fondos de VRA UDP";
 
-const materialesAppParte1 = "construida con ";
+const materialesAppParte1 = "Construida con ";
 
 const materialesAppParte2 = "Flutter ";
 
@@ -111,7 +111,7 @@ final cajitasBienvenida = Column(
     // materiales app
     const Spacer(),
     Container(
-      margin: const EdgeInsets.all(20.0),
+      margin: const EdgeInsets.all(10.0),
       padding: const EdgeInsets.all(15.0),
       height: 80,
       decoration: estilo.decoracionInicio,

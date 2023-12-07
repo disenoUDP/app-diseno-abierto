@@ -73,13 +73,13 @@ const estiloTallerNombre = TextStyle(
     color: colorHeader);
 
 const estiloTallerDocente = TextStyle(
-    fontSize: 10,
+    fontSize: 12,
     fontWeight: FontWeight.w500,
     fontFamily: 'Poppins',
     color: colorHeader);
 
 const estiloTallerTema = TextStyle(
-    fontSize: 10,
+    fontSize: 12,
     fontWeight: FontWeight.normal,
     fontFamily: 'Poppins',
     color: colorHeader);

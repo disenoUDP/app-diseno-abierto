@@ -1,3 +1,6 @@
+const logoDisenoAbierto =
+    "https://raw.githubusercontent.com/disenoUDP/assets/main/diseno-abierto/icon.png";
+
 const talleresJSON =
     "https://raw.githubusercontent.com/disenoUDP/assets/main/diseno-abierto/talleres.json";
 

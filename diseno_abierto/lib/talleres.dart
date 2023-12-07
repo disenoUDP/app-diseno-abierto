@@ -9,7 +9,7 @@ final listaTalleres = FutureBuilder<List<taller.Taller>>(
     if (snapshot.hasError) {
       return const Center(
         child: Text(
-          'cargando info...!',
+          'Cargando info...!',
           style: estilo.estiloTextoCargando,
         ),
       );

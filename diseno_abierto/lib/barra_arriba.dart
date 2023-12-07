@@ -1,7 +1,15 @@
 import 'estilo.dart' as estilo;
 import 'package:flutter/material.dart';
+// import 'archivos.dart' as archivos;
+// import 'package:transparent_image/transparent_image.dart';
 
 final barra = AppBar(
+  // leading: Padding(
+  //     padding: const EdgeInsets.all(8.0),
+  //     child: FadeInImage.memoryNetwork(
+  //         fit: BoxFit.contain,
+  //         placeholder: kTransparentImage,
+  //         image: archivos.logoDisenoAbierto)),
   centerTitle: true,
   title: const Text(
     '#disenoabiertoudp',
