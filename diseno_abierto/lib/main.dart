@@ -1,4 +1,3 @@
-// import 'archivos.dart' as archivos;
 import 'barra_arriba.dart' as barra_arriba;
 import 'estilo.dart' as estilo;
 import 'inicio.dart' as inicio;

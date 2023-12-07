@@ -15,13 +15,6 @@ final listaTalleres = FutureBuilder<List<taller.Taller>>(
       );
     } else if (snapshot.hasData) {
       return taller.TalleresList(talleres: snapshot.data!);
-      // return Column(
-      //   children: <Widget>[
-      //     const Spacer(),
-      //     taller.TalleresList(talleres: snapshot.data!),
-      //     const Spacer(),
-      //   ],
-      // );
     } else {
       return const Center(
         child: CircularProgressIndicator(),

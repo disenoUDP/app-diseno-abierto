@@ -55,7 +55,7 @@ const estiloHeader = TextStyle(
     color: colorHeader);
 
 const estiloTallerSigla = TextStyle(
-    fontSize: 16,
+    fontSize: 12,
     fontWeight: FontWeight.w500,
     fontFamily: 'Poppins',
     color: colorHeader);
@@ -67,8 +67,20 @@ const estiloTallerNombre = TextStyle(
     color: colorHeader);
 
 const estiloTallerDocente = TextStyle(
-    fontSize: 14,
+    fontSize: 10,
     fontWeight: FontWeight.w500,
+    fontFamily: 'Poppins',
+    color: colorHeader);
+
+const estiloTallerTema = TextStyle(
+    fontSize: 10,
+    fontWeight: FontWeight.normal,
+    fontFamily: 'Poppins',
+    color: colorHeader);
+
+const estiloTallerDescripcion = TextStyle(
+    fontSize: 10,
+    fontWeight: FontWeight.normal,
     fontFamily: 'Poppins',
     color: colorHeader);
 
