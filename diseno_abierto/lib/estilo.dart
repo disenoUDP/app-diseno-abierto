@@ -108,6 +108,12 @@ const estiloProyectoNombre = TextStyle(
     fontFamily: 'Poppins',
     color: colorHeader);
 
+const estiloProyectoTexto = TextStyle(
+    fontSize: 10,
+    fontWeight: FontWeight.normal,
+    fontFamily: 'Poppins',
+    color: colorHeader);
+
 const estiloTextoCargando =
     TextStyle(fontSize: 16, fontWeight: FontWeight.w500, fontFamily: 'Poppins');
 

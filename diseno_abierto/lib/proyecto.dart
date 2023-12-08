@@ -9,18 +9,18 @@ import 'package:flutter/material.dart';
 class Proyecto {
   final String sigla;
   final String nombre;
-  // final List<String> estudiantes;
-  // final String texto;
-  // final String etiquetas;
+  List<String> estudiantes;
+  final String texto;
+  List<String> etiquetas;
   // final String url;
   // final String thumbnailUrl;
 
-  const Proyecto({
+  Proyecto({
     required this.sigla,
     required this.nombre,
-    // required this.estudiantes,
-    // required this.texto,
-    // required this.etiquetas,
+    required this.estudiantes,
+    required this.texto,
+    required this.etiquetas,
     // required this.url,
     // required this.thumbnailUrl
   });
@@ -29,9 +29,10 @@ class Proyecto {
     return Proyecto(
       sigla: json['sigla'] as String,
       nombre: json['nombre'] as String,
-      // estudiantes: json['estudiantes'] as List<String>,
-      // texto: json['texto'] as String,
-      // etiquetas: json['etiquetas'] as String,
+      estudiantes:
+          (json['estudiantes'] as List).map((e) => e as String).toList(),
+      texto: json['texto'] as String,
+      etiquetas: (json['etiquetas'] as List).map((e) => e as String).toList(),
       // url: json['url'] as String,
       // thumbnailUrl: json['thumbnailUrl'] as String,
     );
@@ -121,6 +122,25 @@ class _ProyectosListState extends State<ProyectosList> {
                             texto: proyectos[index].nombre,
                             estilo: estiloProyectoNombre),
                         const Spacer(),
+                        for (var estudiante in proyectos[index].estudiantes)
+                          TextoProyecto(
+                              texto: estudiante,
+                              estilo: estiloProyectoEstudiantes),
+                        const Spacer(),
+                        for (var etiqueta in proyectos[index].etiquetas)
+                          TextoProyecto(
+                              texto: '#' + etiqueta,
+                              estilo: estiloProyectoEstudiantes),
+                        // TextoProyecto(
+                        //     texto: proyectos[index].estudiantes[0],
+                        //     estilo: estiloProyectoTexto),
+                        // const Spacer(),
+                        // TextoProyecto(
+                        //     texto: proyectos[index].texto,
+                        //     estilo: estiloProyectoTexto),
+                        // TextoProyecto(
+                        //     texto: proyectos[index].texto,
+                        //     estilo: estiloProyectoTexto),
                         // TextoProyecto(
                         //     texto: proyectos[index].estudiantes,
                         //     estilo: estiloProyectoEstudiantes),
@@ -129,6 +149,7 @@ class _ProyectosListState extends State<ProyectosList> {
                       ],
                       if (presionado == 1) ...[
                         const Spacer(),
+                        const Spacer(),
                         TextoProyecto(
                             texto: proyectos[index].sigla,
                             estilo: estiloProyectoSigla),
@@ -136,6 +157,10 @@ class _ProyectosListState extends State<ProyectosList> {
                         TextoProyecto(
                             texto: proyectos[index].nombre,
                             estilo: estiloProyectoNombre),
+                        const Spacer(),
+                        TextoProyecto(
+                            texto: proyectos[index].texto,
+                            estilo: estiloProyectoTexto),
                         const Spacer(),
                         const Spacer(),
                       ],
