@@ -8,27 +8,31 @@ import 'package:transparent_image/transparent_image.dart';
 class Proyecto {
   final String sigla;
   final String nombre;
-  final String estudiante;
-  final String texto;
-  final String url;
-  final String thumbnailUrl;
+  // final String estudiantes;
+  // final String texto;
+  // final String etiquetas;
+  // final String url;
+  // final String thumbnailUrl;
 
-  const Proyecto(
-      {required this.sigla,
-      required this.nombre,
-      required this.estudiante,
-      required this.texto,
-      required this.url,
-      required this.thumbnailUrl});
+  const Proyecto({
+    required this.sigla,
+    required this.nombre,
+    // required this.estudiantes,
+    // required this.texto,
+    // required this.etiquetas,
+    // required this.url,
+    // required this.thumbnailUrl
+  });
 
   factory Proyecto.fromJson(Map<String, dynamic> json) {
     return Proyecto(
       sigla: json['sigla'] as String,
       nombre: json['nombre'] as String,
-      estudiante: json['estudiante'] as String,
-      texto: json['texto'] as String,
-      url: json['url'] as String,
-      thumbnailUrl: json['thumbnailUrl'] as String,
+      // estudiantes: json['estudiante'] as String,
+      // texto: json['texto'] as String,
+      // etiquetas: json['etiquetas'] as String,
+      // url: json['url'] as String,
+      // thumbnailUrl: json['thumbnailUrl'] as String,
     );
   }
 }
@@ -56,10 +60,10 @@ class ProyectosList extends StatelessWidget {
           child: Card(
               child: Column(
             children: [
-              FadeInImage.memoryNetwork(
-                  fit: BoxFit.contain,
-                  placeholder: kTransparentImage,
-                  image: proyectos[index].thumbnailUrl),
+              // FadeInImage.memoryNetwork(
+              //     fit: BoxFit.contain,
+              //     placeholder: kTransparentImage,
+              //     image: proyectos[index].thumbnailUrl),
               Text(proyectos[index].sigla),
               Text(proyectos[index].nombre,
                   style: Theme.of(context).textTheme.labelSmall),
