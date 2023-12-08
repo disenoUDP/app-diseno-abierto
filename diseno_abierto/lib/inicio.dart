@@ -111,7 +111,7 @@ final cajitasBienvenida = Column(
     // materiales app
     const Spacer(),
     Container(
-      margin: const EdgeInsets.all(10.0),
+      margin: const EdgeInsets.all(20.0),
       padding: const EdgeInsets.all(15.0),
       height: 80,
       decoration: estilo.decoracionInicio,
