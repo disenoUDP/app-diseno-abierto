@@ -10,34 +10,25 @@ Cuenta con el detalle de los talleres de primero y segundo año, talleres vertic
 
 Es el inicio de una base de datos hecha en JSON, teniendo un registro de la  historia de los trabajos de taller, en un formato universal que va a servir para poder generar más plataformas a futuro.
 
-
 ## equipo
 
 Esta app está siendo desarrollada por @janisepulveda, estudiante de diseño UDP, y @montoyamoraga, profesore asistente de diseño UDP.
 
 ## tecnología y herramientas de trabajo
 
-* flutter https://flutter.dev/
+* Flutter https://flutter.dev/
 * GitHub https://github.com
 * Visual Studio Code https://code.visualstudio.com 
   
 ## instalación de desarrollador
 
-* Descargar flutter https://flutter.dev
-* Descargar  Visual Studio Code https://code.visualstudio.com 
-* Instalar la extensión en visual studio Code Dart-Code.dart-code
-* Instalar la extensión en visual studio Dart-Code.flutter
+* Descargar Flutter https://flutter.dev
+* Descargar Visual Studio Code https://code.visualstudio.com 
+* Instalar las extensiones en Visual studio Code Dart-Code.dart-code y Dart-Code.flutter
 
-## instalación de uso
+## instalación
 
-* En caso de tener dispositivo android descargar de la playstore
-* En caso de tener dispositivo ios descargar por usb.
-* Se descarga por usb ya que subirlo a la appstore es costoso, y procura mucho más tiempo, por lo que se optó a una alternativa más accesible, esta ya está probada en android y también en ipad.
-
-
-## funcionamiento
-
-preguntar aaron :)
+* La app está disponible en Apple App Store y Google Play Store
 
 ## informes de entrega
 
@@ -53,7 +44,7 @@ preguntar aaron :)
   habia hecho algo similiar, por lo que fue un desafio,  ya que lo mas cercano a esto fue 
   conocer y usar el lenguaje de arduino.
   
-  * Pasos de aprendizaje:
+* Pasos de aprendizaje:
 
  * Entender funcionamiento y uso de componentes de google material en flutter
  * Estudio completo de JSON para su implementación (este JSON, permite ser una base de datos, 
@@ -65,9 +56,6 @@ preguntar aaron :)
   Por ejemplo: Centrar un titulo es necesario especificar en android ya que por 
   default lo deja anclado en una esquina, en cambio en IOS no es necesario, ya que por default 
   está en el centro.
-* En portabilidad y colaboración se encontraron problemas ya que se realizó el proyecto en dos 
- computadores IOS pero con diferentes sistemas operativos, esto quiere decir que no se podian 
- realizar las mismas tareas de igual forma.
  
 ## bibliografía 
 
@@ -80,5 +68,3 @@ preguntar aaron :)
 ## agradecimientos
 
 este proyecto es financiado por un fondo concursable de UDP.
-
-
