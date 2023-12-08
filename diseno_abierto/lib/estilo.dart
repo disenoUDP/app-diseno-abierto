@@ -90,6 +90,24 @@ const estiloTallerDescripcion = TextStyle(
     fontFamily: 'Poppins',
     color: colorHeader);
 
+const estiloProyectoSigla = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Poppins',
+    color: colorHeader);
+
+const estiloProyectoEstudiantes = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Poppins',
+    color: colorHeader);
+
+const estiloProyectoNombre = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Poppins',
+    color: colorHeader);
+
 const estiloTextoCargando =
     TextStyle(fontSize: 16, fontWeight: FontWeight.w500, fontFamily: 'Poppins');
 

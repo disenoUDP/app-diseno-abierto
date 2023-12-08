@@ -1,14 +1,15 @@
+import 'package:diseno_abierto/estilo.dart';
 import 'package:http/http.dart' as http;
 import 'archivos.dart' as archivos;
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:transparent_image/transparent_image.dart';
+// import 'package:transparent_image/transparent_image.dart';
 
 class Proyecto {
   final String sigla;
   final String nombre;
-  // final String estudiantes;
+  // final List<String> estudiantes;
   // final String texto;
   // final String etiquetas;
   // final String url;
@@ -28,7 +29,7 @@ class Proyecto {
     return Proyecto(
       sigla: json['sigla'] as String,
       nombre: json['nombre'] as String,
-      // estudiantes: json['estudiante'] as String,
+      // estudiantes: json['estudiantes'] as List<String>,
       // texto: json['texto'] as String,
       // etiquetas: json['etiquetas'] as String,
       // url: json['url'] as String,
@@ -37,44 +38,110 @@ class Proyecto {
   }
 }
 
-class ProyectosList extends StatelessWidget {
+class TextoProyecto extends StatefulWidget {
+  const TextoProyecto({super.key, required this.texto, required this.estilo});
+
+  final String texto;
+  final TextStyle estilo;
+
+  @override
+  State<TextoProyecto> createState() => _TextoProyectoState();
+}
+
+class _TextoProyectoState extends State<TextoProyecto> {
+  get texto => widget.texto;
+  get estilo => widget.estilo;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
+      child: Text(
+        texto,
+        softWrap: true,
+        style: estilo,
+        textAlign: TextAlign.center,
+      ),
+    );
+  }
+}
+
+class ProyectosList extends StatefulWidget {
   const ProyectosList({super.key, required this.proyectos});
 
   final List<Proyecto> proyectos;
 
   @override
+  State<ProyectosList> createState() => _ProyectosListState();
+}
+
+class _ProyectosListState extends State<ProyectosList> {
+  get proyectos => widget.proyectos;
+
+  var presionado = 0;
+
+  void botonPresionado() {
+    setState(() {
+      presionado = presionado + 1;
+      presionado = presionado % 2;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return GridView.builder(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
+        crossAxisCount: 1,
       ),
-      itemCount: proyectos.length,
+      itemCount: widget.proyectos.length,
       itemBuilder: (context, index) {
-        // return Image.network(
-        //   talleres[index].thumbnailUrl,
-        //
         // referencia
         // https://gallery.flutter.dev/#/demo/card
-
-        return InkWell(
-          child: Card(
-              child: Column(
-            children: [
-              // FadeInImage.memoryNetwork(
-              //     fit: BoxFit.contain,
-              //     placeholder: kTransparentImage,
-              //     image: proyectos[index].thumbnailUrl),
-              Text(proyectos[index].sigla),
-              Text(proyectos[index].nombre,
-                  style: Theme.of(context).textTheme.labelSmall),
-            ],
-          )),
-        );
-
-        // return Card(
-        //     child: Image.network(
-        //   talleres[index].thumbnailUrl,
-        // ));
+        return Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Center(
+                child: Card(
+                    child: InkWell(
+              onTap: botonPresionado,
+              child: SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.7,
+                  height: null,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      if (presionado == 0) ...[
+                        const Spacer(),
+                        const Spacer(),
+                        TextoProyecto(
+                            texto: proyectos[index].sigla,
+                            estilo: estiloProyectoSigla),
+                        const Spacer(),
+                        TextoProyecto(
+                            texto: proyectos[index].nombre,
+                            estilo: estiloProyectoNombre),
+                        const Spacer(),
+                        // TextoProyecto(
+                        //     texto: proyectos[index].estudiantes,
+                        //     estilo: estiloProyectoEstudiantes),
+                        const Spacer(),
+                        const Spacer(),
+                      ],
+                      if (presionado == 1) ...[
+                        const Spacer(),
+                        TextoProyecto(
+                            texto: proyectos[index].sigla,
+                            estilo: estiloProyectoSigla),
+                        const Spacer(),
+                        TextoProyecto(
+                            texto: proyectos[index].nombre,
+                            estilo: estiloProyectoNombre),
+                        const Spacer(),
+                        const Spacer(),
+                      ],
+                    ],
+                  )),
+            ))));
       },
     );
   }
@@ -92,10 +159,9 @@ Future<List<Proyecto>> fetchProyectos(http.Client client) async {
   final response = await client.get(Uri.parse(archivos.proyectosJSON));
   if (response.statusCode == 200) {
     // If the server did return a 200 OK response, then parse the JSON.
-    //return Taller.fromJson(jsonDecode(response.body));
     return compute(parseProyectos, response.body);
   } else {
     // If the server did not return a 200 OK response, then throw an exception.
-    throw Exception('No pudimos cargar talleres');
+    throw Exception('No pudimos cargar proyectos');
   }
 }

@@ -57,27 +57,29 @@ final listaProyectos = FutureBuilder<List<proyecto.Proyecto>>(
     if (snapshot.hasError) {
       return const Center(
         child: Text(
-          'cargando info...!',
+          'Cargando info...!',
           style: estilo.estiloTextoCargando,
         ),
       );
     } else if (snapshot.hasData) {
-      return const Align(
-          alignment: Alignment.topCenter,
-          child: Wrap(
-            direction: Axis.horizontal,
-            alignment: WrapAlignment.center,
-            children: [
-              MenuFilterChip(),
-              Text(
-                'Próximamente',
-                maxLines: 2,
-                style: estilo.estiloHeader,
-                textAlign: TextAlign.center,
-              ),
-              // proyecto.ProyectosList(proyectos: snapshot.data!)
-            ],
-          ));
+      return
+          // Align(
+          //     alignment: Alignment.topCenter,
+          //     child: Wrap(
+          //       direction: Axis.horizontal,
+          //       alignment: WrapAlignment.center,
+          //       children: [
+          // const MenuFilterChip(),
+          // Text(
+          //   'Próximamente',
+          //   maxLines: 2,
+          //   style: estilo.estiloHeader,
+          //   textAlign: TextAlign.center,
+          // ),
+          proyecto.ProyectosList(proyectos: snapshot.data!);
+
+      // ],
+      // ));
 
       // return proyecto.ProyectosList(proyectos: snapshot.data!);
     } else {
