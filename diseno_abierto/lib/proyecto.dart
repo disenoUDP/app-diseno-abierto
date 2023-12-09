@@ -129,7 +129,7 @@ class _ProyectosListState extends State<ProyectosList> {
                         const Spacer(),
                         for (var etiqueta in proyectos[index].etiquetas)
                           TextoProyecto(
-                              texto: '#' + etiqueta,
+                              texto: '#$etiqueta',
                               estilo: estiloProyectoEstudiantes),
                         // TextoProyecto(
                         //     texto: proyectos[index].estudiantes[0],
