@@ -131,19 +131,6 @@ class _ProyectosListState extends State<ProyectosList> {
                           TextoProyecto(
                               texto: '#$etiqueta',
                               estilo: estiloProyectoEstudiantes),
-                        // TextoProyecto(
-                        //     texto: proyectos[index].estudiantes[0],
-                        //     estilo: estiloProyectoTexto),
-                        // const Spacer(),
-                        // TextoProyecto(
-                        //     texto: proyectos[index].texto,
-                        //     estilo: estiloProyectoTexto),
-                        // TextoProyecto(
-                        //     texto: proyectos[index].texto,
-                        //     estilo: estiloProyectoTexto),
-                        // TextoProyecto(
-                        //     texto: proyectos[index].estudiantes,
-                        //     estilo: estiloProyectoEstudiantes),
                         const Spacer(),
                         const Spacer(),
                       ],

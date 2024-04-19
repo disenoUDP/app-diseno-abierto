@@ -4,12 +4,12 @@ import 'package:url_launcher/url_launcher.dart';
 import 'estilo.dart' as estilo;
 
 const definicionDisenoAbiertoParte1 =
-    "Diseño abierto es una muestra semestral de todos los proyectos de taller en ";
+    "Diseño abierto es una muestra anual de los proyectos de taller en ";
 
 const definicionDisenoAbiertoParte2 = "Diseño UDP";
 
 const definicionApp =
-    "Esta app fue creada para navegar la muestra y construir un registro histórico del evento";
+    "Esta app fue creada para navegar la muestra actual y construir un registro histórico del evento";
 
 const creditosAppParte1 = "Desarrollada por ";
 
