@@ -4,6 +4,7 @@ import 'inicio.dart' as inicio;
 import 'mapa.dart' as plantas;
 import 'proyectos.dart' as proyectos;
 import 'talleres.dart' as talleres;
+import 'nfc.dart' as nfc;
 import 'package:flutter/material.dart';
 
 void main() {
@@ -44,7 +45,8 @@ class _MyHomePageState extends State<MyHomePage> {
     // https://api.flutter.dev/flutter/material/DefaultTabController-class.html
     return DefaultTabController(
       initialIndex: 0,
-      // 0 es el inicio, 1 es el mapa, 2 son los talleres, 3 son los proyectos
+      // 0 es el inicio, 1 es el mapa,
+      // 2 son los talleres, 3 son los proyectos
       length: 4,
       child: Scaffold(
         appBar: barra_arriba.barra,
@@ -57,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
             // pos2
             talleres.listaTalleres,
             // pos3
-            proyectos.listaProyectos
+            proyectos.listaProyectos,
           ],
         ),
       ),

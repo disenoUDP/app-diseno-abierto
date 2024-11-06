@@ -1,20 +1,12 @@
 import 'package:flutter/material.dart';
 
-// const colorPrincipal = Color.fromRGBO(0, 94, 184, 1);
-
 const colorPrincipal = Color(0xFF0000FF);
-
-// const colorIcono = Color(0xFF005EB8);
 
 const colorIcono = Color(0xFF1234FF);
 
 const colorFondo = Colors.white;
 
-// const sombra = Color.fromARGB(255, 0, 69, 133);
-
 const sombra = Color.fromARGB(255, 14, 40, 192);
-
-// const sombra = Colors.pink;
 
 const colorHeader = Color(0xFF1234FF);
 
