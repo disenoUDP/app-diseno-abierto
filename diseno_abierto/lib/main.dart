@@ -4,7 +4,6 @@ import 'inicio.dart' as inicio;
 import 'mapa.dart' as plantas;
 import 'proyectos.dart' as proyectos;
 import 'talleres.dart' as talleres;
-import 'nfc.dart' as nfc;
 import 'package:flutter/material.dart';
 
 void main() {
